@@ -2043,3 +2043,36 @@ ol {
         opacity: 0;
     }
 }
+
+/* =========================
+   MOBILE MENU REMOVE BLUE / MINT TINT
+========================= */
+
+.mobile-menu {
+    background:
+        radial-gradient(circle at 18% 12%, rgba(201, 130, 46, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 5%, rgba(255, 255, 255, 0.1), transparent 28%),
+        var(--color-dark-3) !important;
+}
+
+.mobile-menu__close:hover {
+    border-color: rgba(201, 130, 46, 0.58) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.mobile-toggle:hover {
+    border-color: rgba(201, 130, 46, 0.58) !important;
+}
+
+.mobile-menu__services {
+    background:
+        radial-gradient(circle at 92% 8%, rgba(201, 130, 46, 0.1), transparent 34%),
+        rgba(255, 255, 255, 0.045) !important;
+}
+
+.mobile-menu__link:hover,
+.mobile-menu__link.is-active,
+.mobile-menu__service-link:hover,
+.mobile-menu__contact a:hover {
+    color: var(--color-accent) !important;
+}
