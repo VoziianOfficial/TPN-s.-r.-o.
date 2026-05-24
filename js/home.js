@@ -156,16 +156,20 @@
        TRUST STRIP
     ========================= */
 
-    function renderTrustStrip() {
-        const mount = document.querySelector("[data-trust-strip]");
-        const proof = getHomeData().proof;
+  function renderTrustStrip() {
+    const mount = document.querySelector("[data-trust-strip]");
+    const proof = getHomeData().proof;
 
-        if (!mount || !Array.isArray(proof)) return;
+    if (!mount || !Array.isArray(proof)) return;
 
-        mount.innerHTML = proof.map((item) => `
-      <span class="trust-strip__item">${escapeHtml(item)}</span>
+    const repeatedProof = [...proof, ...proof, ...proof];
+
+    mount.innerHTML = repeatedProof.map((item, index) => `
+      <span class="trust-strip__item" ${index >= proof.length ? 'aria-hidden="true"' : ""}>
+        ${escapeHtml(item)}
+      </span>
     `).join("");
-    }
+  }
 
     /* =========================
        SERVICES
