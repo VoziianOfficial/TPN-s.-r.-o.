@@ -5,8 +5,8 @@ window.SITE_CONFIG = {
     brandName: "TPN",
 
     email: {
-        value: "support@patnagrowth.com",
-        href: "mailto:support@patnagrowth.com",
+        value: "support@tpngroupads.com",
+        href: "mailto:support@tpngroupads.com",
         label: "Email us"
     },
 
