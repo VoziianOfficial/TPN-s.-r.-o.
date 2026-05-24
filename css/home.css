@@ -6824,3 +6824,360 @@
         gap: 0;
     }
 }
+
+/* =========================
+   CONTACT FORM SOFT BACKGROUND + GRAPH ARROW
+========================= */
+
+.home-contact {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Фоновая стрелка-график для секции */
+.home-contact::after {
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: 80px;
+    z-index: 0;
+    width: min(720px, 72vw);
+    height: 460px;
+    pointer-events: none;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='720' height='460' viewBox='0 0 720 460' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 352 C146 312 186 247 268 258 C358 270 381 170 462 174 C536 178 572 112 648 76' stroke='%2317191C' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='10 13'/%3E%3Cpath d='M612 62 L656 72 L636 112' stroke='%2317191C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='54' cy='352' r='7' fill='%2317191C'/%3E%3Ccircle cx='268' cy='258' r='7' fill='%2317191C'/%3E%3Ccircle cx='462' cy='174' r='7' fill='%2317191C'/%3E%3Ccircle cx='648' cy='76' r='7' fill='%2317191C'/%3E%3C/svg%3E");
+}
+
+.contact-clean {
+    position: relative;
+    z-index: 1;
+}
+
+/* Форма — выразительнее, но без скругленных бордеров */
+.contact-clean__form {
+    position: relative;
+    padding: 26px 28px;
+    border: 1px solid rgba(23, 25, 28, 0.14);
+    border-radius: 0 !important;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.64), rgba(238, 235, 226, 0.46)),
+        rgba(255, 255, 255, 0.42);
+    box-shadow:
+        0 24px 68px rgba(22, 25, 29, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
+}
+
+.contact-clean__form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 2px;
+    background: linear-gradient(90deg, #1F2328, rgba(194, 162, 127, 0.72), transparent);
+}
+
+.contact-clean__form::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(31, 35, 40, 0.42));
+}
+
+.contact-clean__form .contact-form {
+    padding: 0;
+    border: 0;
+    border-radius: 0 !important;
+    background: transparent;
+    box-shadow: none;
+}
+
+.contact-clean__form .form-control,
+.contact-clean__form .form-select,
+.contact-clean__form .form-textarea {
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 0 !important;
+}
+
+.contact-clean__form .form-control:focus,
+.contact-clean__form .form-select:focus,
+.contact-clean__form .form-textarea:focus {
+    background: rgba(255, 255, 255, 0.54);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .home-contact::after {
+        right: -160px;
+        top: 120px;
+        width: 720px;
+        height: 420px;
+        opacity: 0.14;
+    }
+
+    .contact-clean__form {
+        padding: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .home-contact::after {
+        right: -210px;
+        top: 180px;
+        width: 620px;
+        height: 360px;
+        opacity: 0.1;
+    }
+
+    .contact-clean__form {
+        padding: 18px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+    .contact-clean__form {
+        padding: 16px;
+    }
+}
+
+/* =========================
+   CONTACT FORM COMPACT + SHINE + ARROW POSITION
+========================= */
+
+/* Стрелку двигаем дальше от края, чтобы ее было видно */
+.home-contact::after {
+    right: 6%;
+    top: 92px;
+    width: min(680px, 62vw);
+    height: 430px;
+    opacity: 0.16;
+    transform: rotate(-2deg);
+}
+
+/* Форма компактнее по высоте */
+.contact-clean__form {
+    position: relative;
+    overflow: hidden;
+    padding: 18px 22px;
+    min-height: auto;
+}
+
+/* Блеск по форме */
+.contact-clean__form::before {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: -36%;
+    z-index: 0;
+    width: 34%;
+    height: 190%;
+    background: linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.58) 45%,
+            rgba(255, 255, 255, 0.22) 52%,
+            transparent 100%);
+    opacity: 0.75;
+    transform: translateX(-120%) rotate(12deg);
+    animation: contactFormShine 6.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.contact-clean__form::after {
+    z-index: 0;
+}
+
+.contact-clean__form .contact-form {
+    position: relative;
+    z-index: 1;
+}
+
+/* Уменьшаем вертикальные расстояния внутри формы */
+.contact-clean__form .form-heading {
+    margin-bottom: 12px;
+}
+
+.contact-clean__form .form-heading .section-kicker {
+    margin-bottom: 6px;
+}
+
+.contact-clean__form .form-heading h3 {
+    margin-bottom: 3px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.contact-clean__form .form-heading p,
+.contact-clean__form .form-text {
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.contact-clean__form .form-row {
+    gap: 3px;
+    margin-bottom: 9px;
+}
+
+.contact-clean__form .form-label {
+    margin-bottom: 3px;
+    font-size: 9.5px;
+}
+
+.contact-clean__form .form-control,
+.contact-clean__form .form-select,
+.contact-clean__form .form-textarea {
+    min-height: 38px;
+    padding: 8px 0;
+    font-size: 13.5px;
+}
+
+.contact-clean__form .form-textarea {
+    min-height: 74px;
+    resize: vertical;
+}
+
+.contact-clean__form .checkbox-row {
+    margin-top: 4px;
+    gap: 8px;
+}
+
+.contact-clean__form .checkbox-text {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.contact-clean__form .form-submit {
+    min-height: 42px;
+    margin-top: 8px;
+    padding: 10px 18px;
+}
+
+/* Анимация блеска */
+@keyframes contactFormShine {
+    0% {
+        transform: translateX(-140%) rotate(12deg);
+    }
+
+    48% {
+        transform: translateX(-140%) rotate(12deg);
+    }
+
+    74% {
+        transform: translateX(430%) rotate(12deg);
+    }
+
+    100% {
+        transform: translateX(430%) rotate(12deg);
+    }
+}
+
+/* Планшет */
+@media (max-width: 1024px) {
+    .home-contact::after {
+        right: -30px;
+        top: 140px;
+        width: min(640px, 78vw);
+        height: 390px;
+        opacity: 0.12;
+    }
+
+    .contact-clean__form {
+        padding: 18px 20px;
+    }
+}
+
+/* Мобилка */
+@media (max-width: 640px) {
+    .home-contact::after {
+        right: -90px;
+        top: 220px;
+        width: 520px;
+        height: 320px;
+        opacity: 0.09;
+    }
+
+    .contact-clean__form {
+        padding: 15px;
+    }
+
+    .contact-clean__form .form-control,
+    .contact-clean__form .form-select,
+    .contact-clean__form .form-textarea {
+        min-height: 37px;
+        padding: 7px 0;
+    }
+
+    .contact-clean__form .form-textarea {
+        min-height: 70px;
+    }
+}
+
+/* Очень маленькая мобилка */
+@media (max-width: 420px) {
+    .contact-clean__form {
+        padding: 14px;
+    }
+
+    .contact-clean__form .form-submit {
+        width: 100%;
+    }
+}
+
+/* =========================
+   FORM ERROR SPACE FIX
+   Empty errors do not reserve space
+========================= */
+
+.contact-clean__form .form-error {
+    display: none;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    height: auto;
+    color: #8f2f2f;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+/* Показываем ошибку только когда JS вставил текст */
+.contact-clean__form .form-error:not(:empty) {
+    display: block;
+    margin-top: 5px;
+    animation: formErrorAppear 180ms ease both;
+}
+
+/* Для agreement, так как ошибка стоит отдельно после checkbox */
+.contact-clean__form .checkbox-row+.form-error:not(:empty) {
+    margin-top: -2px;
+    margin-bottom: 6px;
+}
+
+/* Чуть подсвечиваем поле с ошибкой */
+.contact-clean__form .form-row.has-error .form-control,
+.contact-clean__form .form-row.has-error .form-select,
+.contact-clean__form .form-row.has-error .form-textarea {
+    border-color: rgba(143, 47, 47, 0.72);
+}
+
+/* Мягкое появление ошибки */
+@keyframes formErrorAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
