@@ -362,6 +362,24 @@
         if (!dropdown) return;
 
         const trigger = dropdown.querySelector("[data-services-trigger]");
+        const servicesHref = getNavigation().find((item) => item?.id === "services")?.href || "./index.html#services";
+
+        const navigateToServices = () => {
+            const isHome = getCurrentPageName() === "index.html";
+
+            if (isHome) {
+                const targetId = servicesHref.split("#")[1] || "services";
+                const target = document.getElementById(targetId);
+
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    window.history.pushState(null, "", `./index.html#${targetId}`);
+                    return;
+                }
+            }
+
+            window.location.href = servicesHref;
+        };
 
         const openDropdown = () => {
             clearTimeout(dropdownCloseTimer);
@@ -395,15 +413,9 @@
         });
 
         if (trigger) {
-            trigger.addEventListener("click", () => {
-                const isOpen = dropdown.classList.contains("is-open");
-
-                if (isOpen) {
-                    dropdown.classList.remove("is-open");
-                    trigger.setAttribute("aria-expanded", "false");
-                } else {
-                    openDropdown();
-                }
+            trigger.addEventListener("click", (event) => {
+                event.preventDefault();
+                navigateToServices();
             });
         }
 
