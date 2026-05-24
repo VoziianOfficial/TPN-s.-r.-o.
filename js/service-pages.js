@@ -863,16 +863,33 @@
             .filter((item) => item.id !== service.id)
             .slice(0, 3);
 
+        mount.classList.add("related-orbits");
+
         mount.innerHTML = related.map((item, index) => `
-      <a class="related-card premium-card" href="${escapeHtml(item.href)}" data-aos="fade-up" data-aos-delay="${index * 65}">
-        <span class="related-card__top">
-          <span class="related-card__icon">${createIcon(item.icon || "sparkles")}</span>
-          <span class="related-card__arrow">${createIcon("arrow-up-right")}</span>
+      <a
+        class="related-orbit"
+        href="${escapeHtml(item.href)}"
+        data-aos="fade-up"
+        data-aos-delay="${index * 70}"
+        aria-label="Explore ${escapeHtml(item.title)} service"
+      >
+        <span class="related-orbit__ring" aria-hidden="true"></span>
+
+        <span class="related-orbit__number">
+          ${String(index + 1).padStart(2, "0")}
         </span>
 
-        <span>
-          <span class="related-card__title">${escapeHtml(item.title)}</span>
-          <span class="related-card__text">${escapeHtml(item.cardText || "")}</span>
+        <span class="related-orbit__icon">
+          ${createIcon(item.icon || "sparkles")}
+        </span>
+
+        <span class="related-orbit__content">
+          <span class="related-orbit__title">${escapeHtml(item.title)}</span>
+          <span class="related-orbit__text">${escapeHtml(item.dropdownText || item.cardText || "")}</span>
+        </span>
+
+        <span class="related-orbit__arrow">
+          ${createIcon("arrow-up-right")}
         </span>
       </a>
     `).join("");
