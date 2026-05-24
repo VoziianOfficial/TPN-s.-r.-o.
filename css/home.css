@@ -1536,3 +1536,69 @@
         font-size: 22px;
     }
 }
+
+/* =========================
+   HERO BOTTOM SPACE FIX
+========================= */
+
+.home-hero {
+    min-height: auto;
+    padding-bottom: 28px;
+}
+
+.home-hero__inner {
+    min-height: 560px;
+}
+
+.home-hero__visual {
+    min-height: 500px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .home-hero {
+        padding-bottom: 34px;
+    }
+
+    .home-hero__inner {
+        min-height: auto;
+    }
+
+    .home-hero__visual {
+        min-height: 420px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .home-hero {
+        padding-bottom: 28px;
+    }
+
+    .home-hero__visual {
+        min-height: 360px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 560px) {
+    .home-hero {
+        padding-bottom: 22px;
+    }
+
+    .home-hero__visual {
+        min-height: auto;
+    }
+
+    .home-hero__floating-card {
+        margin-bottom: 0;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 420px) {
+    .home-hero {
+        padding-bottom: 18px;
+    }
+}
+
