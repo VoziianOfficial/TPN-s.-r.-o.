@@ -684,10 +684,6 @@
       </div>
     `;
     }
-    /* =========================
-       DELIVERABLES
-    ========================= */
-
     function renderDeliverables(service) {
         const mount = document.querySelector("[data-service-deliverables]");
         const title = document.querySelector("[data-service-deliverables-title]");
@@ -704,6 +700,18 @@
 
         if (!mount || !Array.isArray(service.deliverables)) return;
 
+        const icons = [
+            "check-check",
+            "sparkles",
+            "target",
+            "file-check-2",
+            "settings-2",
+            "badge-check",
+            "layers",
+            "arrow-up-right"
+        ];
+
+        mount.classList.remove("deliverables-mobile-list");
         mount.classList.add("deliverables-ledger");
 
         mount.innerHTML = `
@@ -716,6 +724,10 @@
                 </span>
 
                 <span class="deliverable-row__line" aria-hidden="true"></span>
+
+                <span class="deliverable-row__mobile-icon" aria-hidden="true">
+                    ${createIcon(icons[index] || "check")}
+                </span>
 
                 <h3 class="deliverable-row__title">
                     ${escapeHtml(item)}
