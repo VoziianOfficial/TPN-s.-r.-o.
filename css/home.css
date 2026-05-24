@@ -495,7 +495,7 @@
     aspect-ratio: 0.92;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(1) contrast(1.05);
+    filter: contrast(1.05) saturate(1.08);
 }
 
 .home-about__image::after {
