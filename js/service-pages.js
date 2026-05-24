@@ -368,18 +368,47 @@
             "clipboard-check"
         ];
 
-        mount.innerHTML = service.included.map((item, index) => `
-      <article class="included-card premium-card" data-aos="fade-up" data-aos-delay="${index * 55}">
-        <div class="included-card__icon">
-          ${createIcon(icons[index] || "check")}
+        mount.classList.add("service-included__map");
+
+        mount.innerHTML = `
+      <div class="included-system">
+        <div class="included-system__panel" data-aos="fade-right">
+          <span class="included-system__eyebrow">Included scope</span>
+
+          <h3 class="included-system__title">
+            ${escapeHtml(service.title)} work shaped as one connected system.
+          </h3>
+
+          <p class="included-system__text">
+            Each part is planned to support clearer direction, better structure, and more practical marketing decisions.
+          </p>
+
+          <div class="included-system__mini">
+            <span>${String(service.included.length).padStart(2, "0")}</span>
+            <strong>Core components</strong>
+          </div>
         </div>
 
-        <h3 class="included-card__title">${escapeHtml(item)}</h3>
-        <p class="included-card__text">
-          ${escapeHtml(getIncludedDescription(service, item, index))}
-        </p>
-      </article>
-    `).join("");
+        <div class="included-system__list">
+          ${service.included.map((item, index) => `
+            <article class="included-row" data-aos="fade-up" data-aos-delay="${index * 45}">
+              <span class="included-row__number">${String(index + 1).padStart(2, "0")}</span>
+
+              <span class="included-row__icon">
+                ${createIcon(icons[index] || "check")}
+              </span>
+
+              <span class="included-row__content">
+                <h3 class="included-row__title">${escapeHtml(item)}</h3>
+                <p class="included-row__text">
+                  ${escapeHtml(getIncludedDescription(service, item, index))}
+                </p>
+              </span>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    `;
     }
 
     function getIncludedDescription(service, item, index) {
@@ -499,15 +528,33 @@
         const mount = document.querySelector("[data-service-method]");
         if (!mount || !Array.isArray(service.method)) return;
 
-        mount.innerHTML = service.method.map((item, index) => `
-      <article class="method-card" data-aos="fade-up" data-aos-delay="${index * 65}">
-        <span class="method-card__number">${String(index + 1).padStart(2, "0")}</span>
-        <h3 class="method-card__title">${escapeHtml(item.title)}</h3>
-        <p class="method-card__text">${escapeHtml(item.text)}</p>
-      </article>
-    `).join("");
-    }
+        mount.classList.add("method-runway");
 
+        mount.innerHTML = `
+      <div class="method-runway__track" aria-label="${escapeHtml(service.title)} method steps">
+        <div class="method-runway__line" aria-hidden="true"></div>
+
+        ${service.method.map((item, index) => `
+          <article class="method-step method-step--${index + 1}" data-aos="fade-up" data-aos-delay="${index * 70}">
+            <span class="method-step__point" aria-hidden="true"></span>
+
+            <span class="method-step__number">
+              ${String(index + 1).padStart(2, "0")}
+            </span>
+
+            <div class="method-step__content">
+              <h3 class="method-step__title">${escapeHtml(item.title)}</h3>
+              <p class="method-step__text">${escapeHtml(item.text)}</p>
+            </div>
+          </article>
+        `).join("")}
+
+        <span class="method-runway__finish" aria-hidden="true">
+          ${createIcon("arrow-up-right")}
+        </span>
+      </div>
+    `;
+    }
     /* =========================
        DELIVERABLES
     ========================= */
