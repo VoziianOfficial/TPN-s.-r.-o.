@@ -1,14 +1,10 @@
-/* =========================
-   LEGAL PAGES
-========================= */
+
 
 .legal-page {
     background: var(--color-bg);
 }
 
-/* =========================
-   LEGAL HERO
-========================= */
+
 
 .legal-hero {
     position: relative;
@@ -183,9 +179,7 @@
     line-height: 1.7;
 }
 
-/* =========================
-   LEGAL LAYOUT
-========================= */
+
 
 .legal-content {
     padding: 96px 0 112px;
@@ -426,9 +420,7 @@
     line-height: 1.7;
 }
 
-/* =========================
-   LEGAL CONTACT BLOCK
-========================= */
+
 
 .legal-contact {
     padding: 0 0 112px;
@@ -540,9 +532,7 @@
     word-break: break-word;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 
 @media (max-width: 1024px) {
     .legal-hero {

@@ -79,9 +79,7 @@
         return config.address?.mapsUrl || "#";
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    
 
     function renderHomeHero() {
         const hero = getHomeData().hero || {};
@@ -153,9 +151,7 @@
         return `${escapeHtml(words.join(" "))} <span>${escapeHtml(lastWords)}</span>`;
     }
 
-    /* =========================
-       TRUST STRIP
-    ========================= */
+    
 
   function renderTrustStrip() {
     const mount = document.querySelector("[data-trust-strip]");
@@ -172,9 +168,7 @@
     `).join("");
   }
 
-    /* =========================
-       SERVICES
-    ========================= */
+    
     function renderHomeServices() {
         const mount = document.querySelector("[data-home-services]");
         const services = getServices();
@@ -231,9 +225,7 @@
         }
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
+    
 
     function renderHomeAbout() {
         const about = getHomeData().about || {};
@@ -271,9 +263,7 @@
         }
     }
 
-    /* =========================
-       PROCESS
-    ========================= */
+    
 
   function renderHomeProcess() {
     const mount = document.querySelector("[data-home-process]");
@@ -312,9 +302,7 @@
       <div class="process-note" aria-hidden="true">Ready to be delivered!</div>
     `;
   }
-    /* =========================
-       BENEFITS
-    ========================= */
+    
 
     function renderHomeBenefits() {
         const mount = document.querySelector("[data-home-benefits]");
@@ -335,9 +323,7 @@
     `).join("");
     }
 
-    /* =========================
-       STRATEGY
-    ========================= */
+    
 
     function renderHomeStrategy() {
         const mount = document.querySelector("[data-home-strategy]");
@@ -368,9 +354,7 @@
     `).join("");
     }
 
-    /* =========================
-       FRAMEWORK
-    ========================= */
+    
 
     function renderHomeFramework() {
         const mount = document.querySelector("[data-home-framework]");
@@ -387,9 +371,7 @@
     `).join("");
     }
 
-  /* =========================
- CONTACT DETAILS
-========================= */
+  
 
   function renderHomeContactDetails() {
     const mount = document.querySelector("[data-home-contact-details]");
@@ -426,9 +408,7 @@
     `;
   }
 
-  /* =========================
-     HERO STAT COUNTER
-  ========================= */
+  
 
   function initHeroStatCounter() {
     const counters = document.querySelectorAll(".home-hero__stat-value");
@@ -490,9 +470,7 @@
     });
   }
 
-  /* =========================
-   SERVICES SWIPER
-========================= */
+  
 
   let homeServicesSwiper = null;
 

@@ -109,9 +109,7 @@
         return Array.isArray(config.legalLinks) ? config.legalLinks : [];
     }
 
-    /* =========================
-       META
-    ========================= */
+    
 
     function applyPageMeta() {
         const page = getCurrentPageName();
@@ -136,9 +134,7 @@
         }
     }
 
-    /* =========================
-       HEADER
-    ========================= */
+    
 
     function renderHeader() {
         const mount = document.querySelector(SELECTORS.headerMount);
@@ -441,9 +437,7 @@
         });
     }
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+    
 
     function initMobileMenu() {
         const menu = document.querySelector("[data-mobile-menu]");
@@ -557,9 +551,7 @@
         });
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    
 
     function renderFooter() {
         const mount = document.querySelector(SELECTORS.footerMount);
@@ -718,9 +710,7 @@
         });
     }
 
-    /* =========================
-       GLOBAL DATA INJECTION
-    ========================= */
+    
 
     function injectGlobalCompanyData() {
         document.querySelectorAll("[data-company-name]").forEach((element) => {
@@ -760,9 +750,7 @@
         injectCurrentYear();
     }
 
-    /* =========================
-       FAQ
-    ========================= */
+    
 
     function renderMountedFaqs() {
         document.querySelectorAll(SELECTORS.faqList).forEach((mount) => {
@@ -834,9 +822,7 @@
         });
     }
 
-    /* =========================
-       FORMS
-    ========================= */
+    
 
     function renderMountedForms() {
         document.querySelectorAll(SELECTORS.contactForm).forEach((mount) => {
@@ -1061,9 +1047,7 @@
         }
     }
 
-    /* =========================
-       COOKIE BANNER
-    ========================= */
+    
 
     function renderCookieBanner() {
         let mount = document.querySelector(SELECTORS.cookieMount);
@@ -1135,9 +1119,7 @@
         }
     }
 
-    /* =========================
-       EXTERNAL LINKS / LIBRARIES
-    ========================= */
+    
 
     function initExternalLinksSafety() {
         document.querySelectorAll('a[target="_blank"]').forEach((link) => {
@@ -1218,9 +1200,7 @@
         }, 800);
     }
 
-    /* =========================
-       PUBLIC HELPERS FOR PAGE JS
-    ========================= */
+    
 
     window.TPN = {
         getCurrentPageName,

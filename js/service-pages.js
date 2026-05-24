@@ -122,9 +122,7 @@
         return imageMap[service.id] || service.image || "";
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    
 
     function renderServiceHero(service) {
         const imageKey = getServiceImageKey(service);
@@ -181,9 +179,7 @@
         return `${escapeHtml(words.join(" "))} <span>${escapeHtml(lastWord)}</span>`;
     }
 
-    /* =========================
-       OVERVIEW
-    ========================= */
+    
 
     function renderServiceOverview(service) {
         const eyebrow = document.querySelector("[data-service-overview-eyebrow]");
@@ -365,9 +361,7 @@
         ];
     }
 
-    /* =========================
-       INCLUDED
-    ========================= */
+    
 
     function renderIncluded(service) {
         const mount = document.querySelector("[data-service-included]");
@@ -586,9 +580,7 @@
         return descriptions[service.id]?.[index] || `${item} is planned with clear structure, practical execution, and ongoing improvement in mind.`;
     }
 
-    /* =========================
-       WHY IT MATTERS
-    ========================= */
+    
 
     function renderWhyItMatters(service) {
         const image = document.querySelector("[data-service-matters-image]");
@@ -647,9 +639,7 @@
         return map[service.id] || "This service matters because it helps connect marketing activity with clearer user understanding, stronger trust, and more practical next steps.";
     }
 
-    /* =========================
-       METHOD
-    ========================= */
+    
 
     function renderMethod(service) {
         const mount = document.querySelector("[data-service-method]");
@@ -739,9 +729,7 @@
     `;
     }
 
-    /* =========================
-       OUTCOME
-    ========================= */
+    
 
     function renderOutcome(service) {
         const title = document.querySelector("[data-service-outcome-title]");
@@ -872,9 +860,7 @@
         ];
     }
 
-    /* =========================
-       RELATED SERVICES
-    ========================= */
+    
 
     function renderRelatedServices(service) {
         const mount = document.querySelector("[data-related-services]");
@@ -912,9 +898,7 @@
     `).join("");
     }
 
-    /* =========================
-       CONTACT DETAILS
-    ========================= */
+    
 
     function renderServiceContactDetails(service) {
         const mount = document.querySelector("[data-service-contact-details]");

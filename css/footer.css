@@ -1,6 +1,4 @@
-/* =========================
-   FOOTER
-========================= */
+
 
 .site-footer {
     position: relative;
@@ -354,9 +352,7 @@
     }
 }
 
-/* =========================
-   FOOTER RESPONSIVE
-========================= */
+
 
 @media (max-width: 1200px) {
     .footer-grid {

@@ -129,9 +129,7 @@
         return config.assets?.images?.legalHero || "./assets/images/legal-texture.jpg";
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    
 
     function renderLegalPage() {
         const data = getCurrentLegalData();
@@ -199,9 +197,7 @@
         }
     }
 
-    /* =========================
-       SIDEBAR NAV
-    ========================= */
+    
 
     function renderLegalNavigation() {
         const mount = document.querySelector("[data-legal-nav]");
@@ -223,9 +219,7 @@
         }).join("");
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    
 
     function renderLegalContact() {
         const mount = document.querySelector("[data-legal-contact-links]");

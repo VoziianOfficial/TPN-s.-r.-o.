@@ -1,14 +1,10 @@
-/* =========================
-   HOME PAGE
-========================= */
+
 
 .home-page {
     background: var(--color-bg);
 }
 
-/* =========================
-   HERO
-========================= */
+
 
 .home-hero {
     position: relative;
@@ -327,9 +323,7 @@
     border-radius: 50%;
 }
 
-/* =========================
-   TRUST STRIP
-========================= */
+
 
 .trust-strip {
     padding: 24px 0 44px;
@@ -372,9 +366,7 @@
     box-shadow: 0 0 0 6px var(--color-accent-soft);
 }
 
-/* =========================
-   SERVICES
-========================= */
+
 
 .home-services {
     padding: 96px 0 112px;
@@ -461,9 +453,7 @@
     margin-top: auto;
 }
 
-/* =========================
-   ABOUT
-========================= */
+
 
 .home-about {
     padding: 112px 0;
@@ -589,9 +579,7 @@
     line-height: 1.65;
 }
 
-/* =========================
-   PROCESS
-========================= */
+
 
 .home-process {
     position: relative;
@@ -766,9 +754,7 @@
     transform: rotate(8deg);
 }
 
-/* =========================
-   BENEFITS
-========================= */
+
 
 .home-benefits {
     padding: 108px 0;
@@ -841,9 +827,7 @@
     line-height: 1.75;
 }
 
-/* =========================
-   DARK STRATEGY
-========================= */
+
 
 .home-strategy {
     position: relative;
@@ -954,9 +938,7 @@
     transform: translateX(4px);
 }
 
-/* =========================
-   FRAMEWORK
-========================= */
+
 
 .home-framework {
     padding: 112px 0;
@@ -1034,9 +1016,7 @@
     line-height: 1.7;
 }
 
-/* =========================
-   FAQ + CONTACT
-========================= */
+
 
 .home-contact {
     padding: 112px 0;
@@ -1127,9 +1107,7 @@
     letter-spacing: -0.055em;
 }
 
-/* =========================
-   RESPONSIVE HOME
-========================= */
+
 
 @media (max-width: 1200px) {
     .home-hero__inner {
@@ -1537,9 +1515,7 @@
     }
 }
 
-/* =========================
-   HERO BOTTOM SPACE FIX
-========================= */
+
 
 .home-hero {
     min-height: auto;
@@ -1554,7 +1530,7 @@
     min-height: 500px;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-hero {
         padding-bottom: 34px;
@@ -1569,7 +1545,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .home-hero {
         padding-bottom: 28px;
@@ -1580,7 +1556,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 560px) {
     .home-hero {
         padding-bottom: 22px;
@@ -1595,19 +1571,16 @@
     }
 }
 
-/* Very small mobile */
+
 @media (max-width: 420px) {
     .home-hero {
         padding-bottom: 18px;
     }
 }
 
-/* =========================
-   FINAL HERO RESPONSIVE FIX
-   Tablet / Mobile clean layout
-========================= */
 
-/* Планшеты */
+
+
 @media (max-width: 1024px) {
     .home-hero {
         min-height: auto;
@@ -1732,7 +1705,7 @@
     }
 }
 
-/* Большие телефоны */
+
 @media (max-width: 768px) {
     .home-hero {
         padding: 56px 0 36px;
@@ -1835,7 +1808,7 @@
     }
 }
 
-/* Телефоны */
+
 @media (max-width: 560px) {
     .home-hero {
         padding: 44px 0 30px;
@@ -1933,7 +1906,7 @@
     }
 }
 
-/* Маленькие телефоны */
+
 @media (max-width: 420px) {
     .home-hero {
         padding-top: 38px;
@@ -1972,11 +1945,9 @@
     }
 }
 
-/* =========================
-   TABLET HERO WIDTH + TRUST MARQUEE
-========================= */
 
-/* Даем заголовку больше ширины на планшете */
+
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .home-hero__inner {
         width: min(100% - 32px, 980px);
@@ -2001,7 +1972,7 @@
     }
 }
 
-/* Бегущая строка trust strip на планшете и мобилке */
+
 @media (max-width: 1024px) {
     .trust-strip {
         padding: 20px 0 34px;
@@ -2086,11 +2057,9 @@
         transform: translateX(-33.333%);
     }
 }
-/* =========================
-   TRUST STRIP DESKTOP NORMAL / MOBILE MARQUEE FIX
-========================= */
 
-/* Desktop: как было раньше */
+
+
 .trust-strip__item[aria-hidden="true"] {
     display: none;
 }
@@ -2099,7 +2068,7 @@
     animation: none;
 }
 
-/* Tablet + mobile: включаем дубли и бегущую строку */
+
 @media (max-width: 1024px) {
     .trust-strip__item[aria-hidden="true"] {
         display: inline-flex;
@@ -2110,9 +2079,7 @@
     }
 }
 
-/* =========================
-   HERO META PILLS HOVER VOLUME
-========================= */
+
 
 .home-hero__mini {
     position: relative;
@@ -2205,9 +2172,7 @@
     display: block;
 }
 
-/* =========================
-   TRUST STRIP PREMIUM HOVER
-========================= */
+
 
 .trust-strip__item {
     position: relative;
@@ -2278,7 +2243,7 @@
         0 10px 22px rgba(31, 35, 40, 0.18);
 }
 
-/* На планшете/мобилке при наведении можно слегка замедлить ощущение строки */
+
 @media (max-width: 1024px) {
     .trust-strip__item {
         padding: 9px 12px;
@@ -2289,9 +2254,7 @@
     }
 }
 
-/* =========================
-   CORE SERVICES PREMIUM UPDATE
-========================= */
+
 
 .home-services {
     padding: 104px 0 118px;
@@ -2467,7 +2430,7 @@
     display: none;
 }
 
-/* Desktop: обычная сетка, Swiper выключен */
+
 @media (min-width: 1025px) {
     .home-services__slider.swiper {
         overflow: visible;
@@ -2484,7 +2447,7 @@
     }
 }
 
-/* Tablet / Mobile: Swiper */
+
 @media (max-width: 1024px) {
     .home-services {
         padding: 88px 0;
@@ -2602,10 +2565,7 @@
     }
 }
 
-/* =========================
-   CORE SERVICES FINAL FIX
-   Desktop grid / Tablet mobile swiper
-========================= */
+
 
 .home-services {
     padding: 104px 0 118px;
@@ -2784,7 +2744,7 @@
     display: none;
 }
 
-/* DESKTOP: обычная сетка */
+
 @media (min-width: 1025px) {
     .home-services__slider.swiper {
         overflow: visible !important;
@@ -2811,7 +2771,7 @@
     }
 }
 
-/* TABLET / MOBILE: Swiper */
+
 @media (max-width: 1024px) {
     .home-services {
         padding: 88px 0;
@@ -2933,10 +2893,7 @@
     }
 }
 
-/* =========================
-   SERVICES DESKTOP HARD RESET
-   Keep desktop cards large and normal
-========================= */
+
 
 @media (min-width: 1025px) {
     .home-services__grid.home-services__slider.swiper {
@@ -2986,9 +2943,7 @@
     }
 }
 
-/* =========================
-   ABOUT POINTS PREMIUM HOVER
-========================= */
+
 
 .about-point {
     position: relative;
@@ -3121,7 +3076,7 @@
     color: rgba(23, 25, 28, 0.68);
 }
 
-/* Mobile: hover мягче, чтобы карточки не прыгали сильно */
+
 @media (max-width: 768px) {
     .about-point:hover {
         transform: translateY(-4px);
@@ -3133,12 +3088,9 @@
         border-radius: 14px;
     }
 }
-/* =========================
-   ABOUT RESPONSIVE POLISH
-   Tablet / Mobile
-========================= */
 
-/* Tablet */
+
+
 @media (max-width: 1024px) {
     .home-about {
         padding: 86px 0;
@@ -3240,7 +3192,7 @@
     }
 }
 
-/* Large mobile */
+
 @media (max-width: 768px) {
     .home-about {
         padding: 72px 0;
@@ -3325,7 +3277,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .home-about {
         padding: 62px 0;
@@ -3407,7 +3359,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 420px) {
     .home-about {
         padding: 54px 0;
@@ -3454,9 +3406,7 @@
     }
 }
 
-/* =========================
-   ABOUT POINTS TABLET COMPACT FIX
-========================= */
+
 
 @media (min-width: 681px) and (max-width: 1024px) {
     .home-about__points {
@@ -3507,10 +3457,7 @@
     }
 }
 
-/* =========================
-   PROCESS SECTION REDESIGN
-   Inspired by reference layout
-========================= */
+
 
 .home-process {
     position: relative;
@@ -3750,7 +3697,7 @@
     transform: rotate(8deg);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-process {
         padding: 92px 0;
@@ -3837,7 +3784,7 @@
     }
 }
 
-/* Large mobile */
+
 @media (max-width: 768px) {
     .home-process {
         padding: 76px 0;
@@ -3930,7 +3877,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .home-process {
         padding: 64px 0 70px;
@@ -4034,7 +3981,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 390px) {
     .process-map {
         min-height: 720px;
@@ -4067,12 +4014,9 @@
     }
 }
 
-/* =========================
-   PROCESS TABLET / MOBILE ALTERNATIVE LAYOUT
-   Desktop stays as reference, iPad/mobile become clean timeline
-========================= */
 
-/* iPad / Tablet: clean 2x2 premium grid */
+
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .home-process {
         padding: 88px 0;
@@ -4183,7 +4127,7 @@
     }
 }
 
-/* Mobile: vertical step timeline */
+
 @media (max-width: 768px) {
     .home-process {
         padding: 72px 0;
@@ -4302,7 +4246,7 @@
     }
 }
 
-/* Small mobile: even more compact */
+
 @media (max-width: 420px) {
     .home-process {
         padding: 60px 0;
@@ -4340,10 +4284,7 @@
     }
 }
 
-/* =========================
-   PROCESS CARD SOFT SHINE
-   Safe: no ::before / ::after conflicts
-========================= */
+
 
 .process-card {
     background-image:
@@ -4412,14 +4353,14 @@
     }
 }
 
-/* Мягче на планшете и мобилке */
+
 @media (max-width: 1024px) {
     .process-card {
         animation-duration: 8.8s;
     }
 }
 
-/* Для пользователей с отключенной анимацией */
+
 @media (prefers-reduced-motion: reduce) {
     .process-card {
         animation: none;
@@ -4429,17 +4370,15 @@
     }
 }
 
-/* =========================
-   PROCESS SECTION PADDING REDUCE
-========================= */
 
-/* Desktop */
+
+
 .home-process {
     padding-top: 56px;
     padding-bottom: 60px;
 }
 
-/* Tablet */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .home-process {
         padding-top: 44px;
@@ -4447,7 +4386,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .home-process {
         padding-top: 36px;
@@ -4455,7 +4394,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 420px) {
     .home-process {
         padding-top: 30px;
@@ -4463,9 +4402,7 @@
     }
 }
 
-/* =========================
-   PROCESS DESKTOP HEADER CENTER FIX
-========================= */
+
 
 @media (min-width: 1025px) {
     .home-process__header {
@@ -4503,47 +4440,42 @@
     }
 }
 
-/* =========================
-   ABOUT SECTION BOTTOM PADDING REDUCE
-========================= */
 
-/* Desktop */
+
+
 .home-about {
     padding-bottom: 56px;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-about {
         padding-bottom: 43px;
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .home-about {
         padding-bottom: 36px;
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 560px) {
     .home-about {
         padding-bottom: 31px;
     }
 }
 
-/* Extra small mobile */
+
 @media (max-width: 420px) {
     .home-about {
         padding-bottom: 27px;
     }
 }
 
-/* =========================
-   BENEFITS EDITORIAL REDESIGN
-   Reference-style section
-========================= */
+
 
 .home-benefits {
     padding: 74px 0 86px;
@@ -4789,7 +4721,7 @@
     pointer-events: none;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-benefits {
         padding: 66px 0 72px;
@@ -4859,7 +4791,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-benefits {
         padding: 56px 0 62px;
@@ -4917,7 +4849,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 420px) {
     .home-benefits {
         padding: 50px 0 56px;
@@ -4941,9 +4873,7 @@
     }
 }
 
-/* =========================
-   BENEFITS TAGS DESKTOP SCATTERED LAYOUT
-========================= */
+
 
 @media (min-width: 1025px) {
     .benefits-editorial__feature-content {
@@ -5014,7 +4944,7 @@
     }
 }
 
-/* Tablet / mobile: возвращаем обычную аккуратную сетку */
+
 @media (max-width: 1024px) {
     .benefits-editorial__tags {
         position: static;
@@ -5035,10 +4965,7 @@
     }
 }
 
-/* =========================
-   GROWTH FRAMEWORK REDESIGN
-   No cards / premium system map
-========================= */
+
 
 .home-framework {
     position: relative;
@@ -5249,7 +5176,7 @@
     line-height: 1.62;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-framework {
         padding: 76px 0 84px;
@@ -5292,7 +5219,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .home-framework {
         padding: 64px 0 70px;
@@ -5365,7 +5292,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 420px) {
     .home-framework {
         padding: 56px 0 62px;
@@ -5392,12 +5319,9 @@
     }
 }
 
-/* =========================
-   GROWTH FRAMEWORK TABLET / MOBILE POLISH
-   Better responsive version
-========================= */
 
-/* Tablet / iPad */
+
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .home-framework {
         padding: 76px 0 84px;
@@ -5507,7 +5431,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .home-framework {
         padding: 62px 0 68px;
@@ -5659,7 +5583,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 480px) {
     .home-framework {
         padding: 54px 0 60px;
@@ -5719,9 +5643,7 @@
     }
 }
 
-/* =========================
-   GROWTH SIGNAL MOBILE 3 IN ROW
-========================= */
+
 
 @media (max-width: 480px) {
     .growth-system__signal {
@@ -5753,9 +5675,7 @@
     }
 }
 
-/* =========================
-   DARK STRATEGY PNG VISUAL REDESIGN
-========================= */
+
 
 .home-strategy {
     position: relative;
@@ -5838,7 +5758,7 @@
     object-position: center;
 }
 
-/* big PNG/photo */
+
 .strategy-visuals__frame--main {
     top: 26px;
     right: 0;
@@ -5848,7 +5768,7 @@
     transform: rotate(2deg);
 }
 
-/* small floating PNG/photo */
+
 .strategy-visuals__frame--small {
     top: 0;
     left: 0;
@@ -5859,7 +5779,7 @@
     transform: rotate(-7deg);
 }
 
-/* wide lower PNG/photo */
+
 .strategy-visuals__frame--wide {
     right: 44px;
     bottom: 26px;
@@ -5938,7 +5858,7 @@
         0 8px 18px rgba(216, 195, 165, 0.08);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-strategy {
         padding: 84px 0 66px;
@@ -5999,7 +5919,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-strategy {
         padding: 68px 0 56px;
@@ -6068,7 +5988,7 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 420px) {
     .strategy-visuals__frame--main {
         height: 240px;
@@ -6084,9 +6004,7 @@
     }
 }
 
-/* =========================
-   DARK STRATEGY MOBILE PREMIUM REDESIGN
-========================= */
+
 
 @media (max-width: 640px) {
     .home-strategy {
@@ -6254,7 +6172,7 @@
     }
 }
 
-/* Very small mobile */
+
 @media (max-width: 420px) {
     .home-strategy {
         padding: 52px 0 42px;
@@ -6282,9 +6200,7 @@
     }
 }
 
-/* =========================
-   STRATEGY LINKS MOBILE COMPACT CHIPS
-========================= */
+
 
 @media (max-width: 640px) {
     .strategy-links-row {
@@ -6338,9 +6254,7 @@
     }
 }
 
-/* =========================
-   BENEFITS TEAM PHOTO EDGE FIX
-========================= */
+
 
 @media (min-width: 1025px) {
     .benefits-editorial__feature {
@@ -6372,10 +6286,7 @@
     filter: grayscale(1) contrast(1.12) brightness(0.92);
 }
 
-/* =========================
-   CONTACT CLEAN REDESIGN
-   No card-in-card / minimal editorial layout
-========================= */
+
 
 .home-contact {
     position: relative;
@@ -6493,7 +6404,7 @@
     line-height: 1.4;
 }
 
-/* FORM: убираем карточность */
+
 .contact-clean__form .contact-form {
     padding: 0;
     border: 0;
@@ -6563,7 +6474,7 @@
     margin-top: 12px;
 }
 
-/* FAQ: не карточки, а чистые строки */
+
 .contact-clean__faq {
     padding-top: 42px;
 }
@@ -6631,7 +6542,7 @@
     line-height: 1.62;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-contact {
         padding: 72px 0 78px;
@@ -6680,7 +6591,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-contact {
         padding: 58px 0 64px;
@@ -6754,10 +6665,7 @@
     }
 }
 
-/* =========================
-   CONTACT FAQ ACCORDION GRID FIX
-   Prevent right column from stretching
-========================= */
+
 
 .contact-clean__faq-list {
     align-items: start;
@@ -6772,7 +6680,7 @@
     align-self: start;
 }
 
-/* На desktop оставляем 2 колонки, но каждая FAQ-строка живет отдельно */
+
 @media (min-width: 1025px) {
     .contact-clean__faq-list {
         display: grid;
@@ -6786,10 +6694,7 @@
     }
 }
 
-/* =========================
-   CONTACT FAQ TRUE COLUMNS FIX
-   No grid row stretching / no fake opening
-========================= */
+
 
 @media (min-width: 1025px) {
     .contact-clean__faq-list {
@@ -6825,16 +6730,14 @@
     }
 }
 
-/* =========================
-   CONTACT FORM SOFT BACKGROUND + GRAPH ARROW
-========================= */
+
 
 .home-contact {
     position: relative;
     isolation: isolate;
 }
 
-/* Фоновая стрелка-график для секции */
+
 .home-contact::after {
     content: "";
     position: absolute;
@@ -6856,7 +6759,7 @@
     z-index: 1;
 }
 
-/* Форма — выразительнее, но без скругленных бордеров */
+
 .contact-clean__form {
     position: relative;
     padding: 26px 28px;
@@ -6912,7 +6815,7 @@
     background: rgba(255, 255, 255, 0.54);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .home-contact::after {
         right: -160px;
@@ -6927,7 +6830,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-contact::after {
         right: -210px;
@@ -6942,18 +6845,16 @@
     }
 }
 
-/* Small mobile */
+
 @media (max-width: 420px) {
     .contact-clean__form {
         padding: 16px;
     }
 }
 
-/* =========================
-   CONTACT FORM COMPACT + SHINE + ARROW POSITION
-========================= */
 
-/* Стрелку двигаем дальше от края, чтобы ее было видно */
+
+
 .home-contact::after {
     right: 6%;
     top: 92px;
@@ -6963,7 +6864,7 @@
     transform: rotate(-2deg);
 }
 
-/* Форма компактнее по высоте */
+
 .contact-clean__form {
     position: relative;
     overflow: hidden;
@@ -6971,7 +6872,7 @@
     min-height: auto;
 }
 
-/* Блеск по форме */
+
 .contact-clean__form::before {
     content: "";
     position: absolute;
@@ -7000,7 +6901,7 @@
     z-index: 1;
 }
 
-/* Уменьшаем вертикальные расстояния внутри формы */
+
 .contact-clean__form .form-heading {
     margin-bottom: 12px;
 }
@@ -7061,7 +6962,7 @@
     padding: 10px 18px;
 }
 
-/* Анимация блеска */
+
 @keyframes contactFormShine {
     0% {
         transform: translateX(-140%) rotate(12deg);
@@ -7080,7 +6981,7 @@
     }
 }
 
-/* Планшет */
+
 @media (max-width: 1024px) {
     .home-contact::after {
         right: -30px;
@@ -7095,7 +6996,7 @@
     }
 }
 
-/* Мобилка */
+
 @media (max-width: 640px) {
     .home-contact::after {
         right: -90px;
@@ -7121,7 +7022,7 @@
     }
 }
 
-/* Очень маленькая мобилка */
+
 @media (max-width: 420px) {
     .contact-clean__form {
         padding: 14px;
@@ -7132,10 +7033,7 @@
     }
 }
 
-/* =========================
-   FORM ERROR SPACE FIX
-   Empty errors do not reserve space
-========================= */
+
 
 .contact-clean__form .form-error {
     display: none;
@@ -7149,27 +7047,27 @@
     line-height: 1.35;
 }
 
-/* Показываем ошибку только когда JS вставил текст */
+
 .contact-clean__form .form-error:not(:empty) {
     display: block;
     margin-top: 5px;
     animation: formErrorAppear 180ms ease both;
 }
 
-/* Для agreement, так как ошибка стоит отдельно после checkbox */
+
 .contact-clean__form .checkbox-row+.form-error:not(:empty) {
     margin-top: -2px;
     margin-bottom: 6px;
 }
 
-/* Чуть подсвечиваем поле с ошибкой */
+
 .contact-clean__form .form-row.has-error .form-control,
 .contact-clean__form .form-row.has-error .form-select,
 .contact-clean__form .form-row.has-error .form-textarea {
     border-color: rgba(143, 47, 47, 0.72);
 }
 
-/* Мягкое появление ошибки */
+
 @keyframes formErrorAppear {
     from {
         opacity: 0;
