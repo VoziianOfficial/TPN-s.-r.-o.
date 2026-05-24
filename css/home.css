@@ -4340,3 +4340,202 @@
     }
 }
 
+/* =========================
+   PROCESS CARD SOFT SHINE
+   Safe: no ::before / ::after conflicts
+========================= */
+
+.process-card {
+    background-image:
+        linear-gradient(115deg,
+            transparent 0%,
+            transparent 34%,
+            rgba(255, 255, 255, 0.55) 45%,
+            rgba(255, 255, 255, 0.18) 50%,
+            transparent 62%,
+            transparent 100%),
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(238, 237, 233, 0.9));
+    background-size:
+        260% 100%,
+        100% 100%;
+    background-position:
+        -180% 0,
+        center;
+    animation: processCardShine 7.5s ease-in-out infinite;
+    will-change: background-position;
+}
+
+.process-card:nth-of-type(2) {
+    animation-delay: 0.9s;
+}
+
+.process-card:nth-of-type(3) {
+    animation-delay: 1.8s;
+}
+
+.process-card:nth-of-type(4) {
+    animation-delay: 2.7s;
+}
+
+.process-card:hover {
+    background-position:
+        120% 0,
+        center;
+    animation-duration: 3.2s;
+}
+
+@keyframes processCardShine {
+    0% {
+        background-position:
+            -180% 0,
+            center;
+    }
+
+    42% {
+        background-position:
+            -180% 0,
+            center;
+    }
+
+    68% {
+        background-position:
+            140% 0,
+            center;
+    }
+
+    100% {
+        background-position:
+            140% 0,
+            center;
+    }
+}
+
+/* Мягче на планшете и мобилке */
+@media (max-width: 1024px) {
+    .process-card {
+        animation-duration: 8.8s;
+    }
+}
+
+/* Для пользователей с отключенной анимацией */
+@media (prefers-reduced-motion: reduce) {
+    .process-card {
+        animation: none;
+        background-position:
+            120% 0,
+            center;
+    }
+}
+
+/* =========================
+   PROCESS SECTION PADDING REDUCE
+========================= */
+
+/* Desktop */
+.home-process {
+    padding-top: 56px;
+    padding-bottom: 60px;
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home-process {
+        padding-top: 44px;
+        padding-bottom: 44px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .home-process {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+    .home-process {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/* =========================
+   PROCESS DESKTOP HEADER CENTER FIX
+========================= */
+
+@media (min-width: 1025px) {
+    .home-process__header {
+        width: min(var(--container), calc(100% - 40px));
+        max-width: 1180px;
+        margin-inline: auto;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    .home-process__header.section-header--center {
+        text-align: center;
+    }
+
+    .home-process__header .section-kicker {
+        margin-inline: auto;
+        justify-content: center;
+    }
+
+    .home-process__header .section-title {
+        max-width: 980px;
+        margin-inline: auto;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .home-process__header .section-text {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .process-map {
+        margin-top: 18px;
+    }
+}
+
+/* =========================
+   ABOUT SECTION BOTTOM PADDING REDUCE
+========================= */
+
+/* Desktop */
+.home-about {
+    padding-bottom: 56px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .home-about {
+        padding-bottom: 43px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .home-about {
+        padding-bottom: 36px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 560px) {
+    .home-about {
+        padding-bottom: 31px;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 420px) {
+    .home-about {
+        padding-bottom: 27px;
+    }
+}
