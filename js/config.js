@@ -79,6 +79,7 @@ window.SITE_CONFIG = {
             href: "./google-ads.html",
             icon: "badge-dollar-sign",
             image: "./assets/images/hero-google-ads.jpg",
+            homeImage: "./assets/images/home-service-google-ads.jpg",
             cardText:
                 "Build focused paid search and remarketing campaigns designed around qualified traffic, clearer tracking, and smarter budget direction.",
             dropdownText: "Paid search, remarketing, tracking, and budget direction.",
@@ -160,6 +161,7 @@ window.SITE_CONFIG = {
             href: "./seo-optimization.html",
             icon: "search-check",
             image: "./assets/images/hero-seo-optimization.jpg",
+            homeImage: "./assets/images/home-service-seo.jpg",
             cardText:
                 "Improve organic visibility with technical SEO, on-page refinement, keyword direction, content structure, and practical reporting.",
             dropdownText: "Technical SEO, content direction, visibility, and reporting.",
@@ -241,6 +243,7 @@ window.SITE_CONFIG = {
             href: "./social-media-marketing.html",
             icon: "messages-square",
             image: "./assets/images/hero-social-media.jpg",
+            homeImage: "./assets/images/home-service-social.jpg",
             cardText:
                 "Shape stronger brand presence with content planning, campaign creative, paid social direction, audience targeting, and reporting.",
             dropdownText: "Content planning, paid social, audiences, and creative.",
@@ -314,7 +317,7 @@ window.SITE_CONFIG = {
             metaDescription:
                 "Social media marketing, content planning, paid social direction, audience targeting, creative campaigns, and reporting from TPN s. r. o."
         },
-
+ 
         {
             id: "web-design",
             title: "Web Design",
@@ -322,6 +325,7 @@ window.SITE_CONFIG = {
             href: "./web-design.html",
             icon: "layout-template",
             image: "./assets/images/hero-web-design.jpg",
+            homeImage: "./assets/images/home-service-web-design.jpg",
             cardText:
                 "Create modern responsive websites and landing pages with clear structure, polished UI, strong messaging, and conversion-aware layouts.",
             dropdownText: "Modern websites, landing pages, UX, and presentation.",
@@ -403,6 +407,7 @@ window.SITE_CONFIG = {
             href: "./conversion-boost.html",
             icon: "mouse-pointer-click",
             image: "./assets/images/hero-conversion-boost.jpg",
+            homeImage: "./assets/images/home-service-conversion.jpg",
             cardText:
                 "Improve landing pages, CTA structure, form clarity, trust signals, and user flows so visitors have a clearer path to act.",
             dropdownText: "Landing page flow, CTA clarity, forms, and trust signals.",
@@ -484,6 +489,7 @@ window.SITE_CONFIG = {
             href: "./local-seo.html",
             icon: "map-pin-check",
             image: "./assets/images/hero-local-seo.jpg",
+            homeImage: "./assets/images/home-service-local-seo.jpg",
             cardText:
                 "Strengthen location-based visibility with local search direction, Google Business Profile guidance, citations, and local content signals.",
             dropdownText: "Google Business Profile, local keywords, citations, and visibility.",

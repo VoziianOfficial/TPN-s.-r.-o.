@@ -175,48 +175,61 @@
     /* =========================
        SERVICES
     ========================= */
-  function renderHomeServices() {
-    const mount = document.querySelector("[data-home-services]");
-    const services = getServices();
+    function renderHomeServices() {
+        const mount = document.querySelector("[data-home-services]");
+        const services = getServices();
 
-    if (!mount || !services.length) return;
+        if (!mount || !services.length) return;
 
     mount.classList.add("swiper", "home-services__slider");
 
     mount.innerHTML = `
       <div class="swiper-wrapper home-services__wrapper">
-        ${services.map((service, index) => `
-          <a
-            class="service-card premium-card swiper-slide"
-            href="${escapeHtml(service.href)}"
-            style="--service-bg: url('${escapeHtml(service.image || "")}');"
-            data-aos="fade-up"
-            data-aos-delay="${index * 55}"
-            aria-label="Explore ${escapeHtml(service.title)} service"
-          >
-            <span class="service-card__bg" aria-hidden="true"></span>
+        ${services.map((service, index) => {
+      const serviceBg = service.homeImage || service.image || "";
+      const resolvedServiceBg = serviceBg ? resolveAssetUrl(serviceBg) : "";
 
-            <span class="service-card__top">
-              <span class="card-icon">${createIcon(service.icon || "sparkles")}</span>
-              <span class="service-card__number">${String(index + 1).padStart(2, "0")}</span>
-            </span>
+      return `
+              <a
+                class="service-card premium-card swiper-slide"
+                href="${escapeHtml(service.href)}"
+                style="--service-bg: ${resolvedServiceBg ? `url('${escapeHtml(resolvedServiceBg)}')` : "none"};"
+                data-aos="fade-up"
+                data-aos-delay="${index * 55}"
+                aria-label="Explore ${escapeHtml(service.title)} service"
+              >
+                <span class="service-card__bg" aria-hidden="true"></span>
 
-            <span class="service-card__body">
-              <span class="service-card__title">${escapeHtml(service.title)}</span>
-              <span class="service-card__text">${escapeHtml(service.cardText || "")}</span>
-            </span>
+                <span class="service-card__top">
+                  <span class="card-icon">${createIcon(service.icon || "sparkles")}</span>
+                  <span class="service-card__number">${String(index + 1).padStart(2, "0")}</span>
+                </span>
 
-            <span class="text-link service-card__link">
-              <span>Explore service</span>
-              ${createIcon("arrow-up-right")}
-            </span>
-          </a>
-        `).join("")}
+                <span class="service-card__body">
+                  <span class="service-card__title">${escapeHtml(service.title)}</span>
+                  <span class="service-card__text">${escapeHtml(service.cardText || "")}</span>
+                </span>
+
+                <span class="text-link service-card__link">
+                  <span>Explore service</span>
+                  ${createIcon("arrow-up-right")}
+                </span>
+              </a>
+            `;
+    }).join("")}
       </div>
 
       <div class="home-services__pagination swiper-pagination" aria-label="Services slider pagination"></div>
     `;
   }
+
+    function resolveAssetUrl(path) {
+        try {
+            return new URL(path, document.baseURI).href;
+        } catch (error) {
+            return path;
+        }
+    }
 
     /* =========================
        ABOUT
