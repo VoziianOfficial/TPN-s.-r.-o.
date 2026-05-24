@@ -490,6 +490,7 @@ window.SITE_CONFIG = {
             icon: "map-pin-check",
             image: "./assets/images/hero-local-seo.jpg",
             homeImage: "./assets/images/home-service-local-seo.jpg",
+            mattersImage: "./assets/images/matters-local-seo.jpg",
             cardText:
                 "Strengthen location-based visibility with local search direction, Google Business Profile guidance, citations, and local content signals.",
             dropdownText: "Google Business Profile, local keywords, citations, and visibility.",

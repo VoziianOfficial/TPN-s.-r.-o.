@@ -106,6 +106,10 @@
     }
 
     function getMatterImage(service) {
+        if (service.mattersImage) {
+            return service.mattersImage;
+        }
+
         const imageMap = {
             "google-ads": getImage("framework") || service.image,
             "seo-optimization": getImage("strategy") || service.image,
