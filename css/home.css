@@ -2985,3 +2985,524 @@
         line-height: 1.68;
     }
 }
+
+/* =========================
+   ABOUT POINTS PREMIUM HOVER
+========================= */
+
+.about-point {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    cursor: default;
+    transform: translateY(0);
+    border-color: rgba(23, 25, 28, 0.12);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(246, 244, 239, 0.48));
+    box-shadow:
+        0 12px 34px rgba(22, 25, 29, 0.055),
+        inset 0 1px 0 rgba(255, 255, 255, 0.62);
+    transition:
+        transform 320ms cubic-bezier(0.19, 1, 0.22, 1),
+        border-color 320ms ease,
+        background 320ms ease,
+        box-shadow 320ms ease;
+}
+
+.about-point::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 58px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #C9AD82, rgba(31, 35, 40, 0.18), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 320ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.about-point::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    background:
+        radial-gradient(circle at 18% 12%, rgba(201, 173, 130, 0.18), transparent 34%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 244, 239, 0.72));
+    opacity: 0;
+    transition: opacity 320ms ease;
+}
+
+.about-point:hover {
+    transform: translateY(-7px);
+    border-color: rgba(201, 173, 130, 0.38);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow:
+        0 26px 70px rgba(22, 25, 29, 0.14),
+        0 10px 24px rgba(201, 173, 130, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.about-point:hover::before {
+    transform: scaleX(1);
+}
+
+.about-point:hover::after {
+    opacity: 1;
+}
+
+.about-point__icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    color: #1F2328;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(201, 173, 130, 0.16));
+    box-shadow:
+        0 12px 28px rgba(22, 25, 29, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.74);
+    transition:
+        transform 320ms cubic-bezier(0.19, 1, 0.22, 1),
+        background 320ms ease,
+        box-shadow 320ms ease,
+        color 320ms ease;
+}
+
+.about-point__icon svg {
+    width: 23px;
+    height: 23px;
+    stroke-width: 1.9;
+    transition:
+        transform 320ms cubic-bezier(0.19, 1, 0.22, 1),
+        filter 320ms ease;
+}
+
+.about-point:hover .about-point__icon {
+    transform: translateY(-2px) rotate(-3deg);
+    color: #16191D;
+    background:
+        linear-gradient(135deg, #E2CFAD, #B99A6F);
+    box-shadow:
+        0 18px 38px rgba(22, 25, 29, 0.14),
+        0 8px 18px rgba(201, 173, 130, 0.16);
+}
+
+.about-point:hover .about-point__icon svg {
+    transform: scale(1.12);
+    filter: drop-shadow(0 6px 10px rgba(31, 35, 40, 0.16));
+}
+
+.about-point__title {
+    transition:
+        color 280ms ease,
+        transform 280ms ease;
+}
+
+.about-point__text {
+    transition:
+        color 280ms ease,
+        transform 280ms ease;
+}
+
+.about-point:hover .about-point__title {
+    color: #16191D;
+    transform: translateY(-1px);
+}
+
+.about-point:hover .about-point__text {
+    color: rgba(23, 25, 28, 0.68);
+}
+
+/* Mobile: hover мягче, чтобы карточки не прыгали сильно */
+@media (max-width: 768px) {
+    .about-point:hover {
+        transform: translateY(-4px);
+    }
+
+    .about-point__icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+    }
+}
+/* =========================
+   ABOUT RESPONSIVE POLISH
+   Tablet / Mobile
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .home-about {
+        padding: 86px 0;
+    }
+
+    .home-about__grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        align-items: center;
+    }
+
+    .home-about__media {
+        width: min(100%, 620px);
+        margin-inline: auto;
+    }
+
+    .home-about__image {
+        border-radius: 32px;
+    }
+
+    .home-about__image img {
+        aspect-ratio: 1.15;
+        object-position: center;
+    }
+
+    .home-about__badge {
+        right: 18px;
+        bottom: 18px;
+        max-width: 260px;
+        padding: 16px;
+        border-radius: 20px;
+    }
+
+    .home-about__badge-title {
+        font-size: 20px;
+    }
+
+    .home-about__badge-text {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .home-about__content {
+        width: min(100%, 820px);
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .home-about__content .section-kicker {
+        margin-inline: auto;
+        justify-content: center;
+    }
+
+    .home-about__content .section-title {
+        max-width: 820px;
+        margin-inline: auto;
+    }
+
+    .home-about__content .section-text {
+        max-width: 720px;
+        margin-inline: auto;
+    }
+
+    .home-about__points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: min(100%, 720px);
+        margin: 28px auto 0;
+    }
+
+    .about-point {
+        min-height: auto;
+        padding: 16px;
+        border-radius: 22px;
+        text-align: left;
+    }
+
+    .about-point__icon {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 12px;
+        border-radius: 14px;
+    }
+
+    .about-point__icon svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .about-point__title {
+        margin-bottom: 6px;
+        font-size: 16px;
+        line-height: 1.08;
+    }
+
+    .about-point__text {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+}
+
+/* Large mobile */
+@media (max-width: 768px) {
+    .home-about {
+        padding: 72px 0;
+    }
+
+    .home-about__grid {
+        gap: 34px;
+    }
+
+    .home-about__media {
+        width: min(100%, 560px);
+    }
+
+    .home-about__image {
+        border-radius: 28px;
+    }
+
+    .home-about__image img {
+        aspect-ratio: 1.05;
+    }
+
+    .home-about__badge {
+        right: 14px;
+        bottom: 14px;
+        max-width: 230px;
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .home-about__badge-title {
+        font-size: 18px;
+    }
+
+    .home-about__badge-text {
+        font-size: 11.5px;
+    }
+
+    .home-about__content .section-title {
+        max-width: 620px;
+    }
+
+    .home-about__content .section-text {
+        max-width: 560px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .home-about__points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .about-point {
+        padding: 14px;
+        border-radius: 20px;
+    }
+
+    .about-point:hover {
+        transform: translateY(-4px);
+    }
+
+    .about-point__icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+        border-radius: 13px;
+    }
+
+    .about-point__icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .about-point__title {
+        font-size: 15px;
+    }
+
+    .about-point__text {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .home-about {
+        padding: 62px 0;
+    }
+
+    .home-about__grid {
+        gap: 28px;
+    }
+
+    .home-about__media {
+        width: 100%;
+    }
+
+    .home-about__image {
+        border-radius: 24px;
+    }
+
+    .home-about__image img {
+        aspect-ratio: 0.95;
+    }
+
+    .home-about__badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: none;
+        margin-top: 10px;
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .home-about__content {
+        text-align: center;
+    }
+
+    .home-about__content .section-title {
+        font-size: clamp(2rem, 10vw, 2.85rem);
+        line-height: 1;
+        letter-spacing: -0.052em;
+    }
+
+    .home-about__content .section-text {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .home-about__points {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        margin-top: 22px;
+    }
+
+    .about-point {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr);
+        column-gap: 12px;
+        row-gap: 4px;
+        align-items: start;
+        padding: 13px;
+        border-radius: 18px;
+    }
+
+    .about-point__icon {
+        grid-row: span 2;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 0;
+    }
+
+    .about-point__title {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .about-point__text {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.48;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+    .home-about {
+        padding: 54px 0;
+    }
+
+    .home-about__image {
+        border-radius: 22px;
+    }
+
+    .home-about__badge {
+        padding: 13px;
+    }
+
+    .home-about__badge-title {
+        font-size: 17px;
+    }
+
+    .home-about__badge-text {
+        font-size: 11px;
+    }
+
+    .about-point {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .about-point__icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+    }
+
+    .about-point__icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .about-point__title {
+        font-size: 14px;
+    }
+
+    .about-point__text {
+        font-size: 11.5px;
+    }
+}
+
+/* =========================
+   ABOUT POINTS TABLET COMPACT FIX
+========================= */
+
+@media (min-width: 681px) and (max-width: 1024px) {
+    .home-about__points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: min(100%, 680px);
+        margin-top: 24px;
+    }
+
+    .about-point {
+        position: relative;
+        min-height: 128px;
+        padding: 15px 58px 15px 15px;
+        border-radius: 20px;
+    }
+
+    .about-point__icon {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        margin: 0;
+        border-radius: 13px;
+    }
+
+    .about-point__icon svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .about-point__title {
+        max-width: 100%;
+        margin: 0 0 6px;
+        padding-right: 0;
+        font-size: 15px;
+        line-height: 1.08;
+    }
+
+    .about-point__text {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.48;
+    }
+
+    .about-point:hover {
+        transform: translateY(-4px);
+    }
+}
