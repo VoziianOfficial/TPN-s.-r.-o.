@@ -5,14 +5,15 @@
     const helpers = window.TPN || {};
 
     document.addEventListener("DOMContentLoaded", () => {
-        renderHomeHero();
-        renderTrustStrip();
-        renderHomeServices();
-        renderHomeAbout();
-        renderHomeProcess();
-        renderHomeBenefits();
-        renderHomeStrategy();
-        renderHomeFramework();
+      renderHomeHero();
+      renderTrustStrip();
+      renderHomeServices();
+      initHomeServicesSwiper();
+      renderHomeAbout();
+      renderHomeProcess();
+      renderHomeBenefits();
+      renderHomeStrategy();
+      renderHomeFramework();
       renderHomeContactDetails();
       initHeroStatCounter();
 
@@ -174,32 +175,48 @@
     /* =========================
        SERVICES
     ========================= */
+  function renderHomeServices() {
+    const mount = document.querySelector("[data-home-services]");
+    const services = getServices();
 
-    function renderHomeServices() {
-        const mount = document.querySelector("[data-home-services]");
-        const services = getServices();
+    if (!mount || !services.length) return;
 
-        if (!mount || !services.length) return;
+    mount.classList.add("swiper", "home-services__slider");
 
-        mount.innerHTML = services.map((service, index) => `
-      <article class="service-card premium-card" data-aos="fade-up" data-aos-delay="${index * 55}">
-        <div>
-          <div class="service-card__top">
-            <span class="card-icon">${createIcon(service.icon || "sparkles")}</span>
-            <span class="service-card__number">${String(index + 1).padStart(2, "0")}</span>
-          </div>
+    mount.innerHTML = `
+      <div class="swiper-wrapper home-services__wrapper">
+        ${services.map((service, index) => `
+          <a
+            class="service-card premium-card swiper-slide"
+            href="${escapeHtml(service.href)}"
+            style="--service-bg: url('${escapeHtml(service.image || "")}');"
+            data-aos="fade-up"
+            data-aos-delay="${index * 55}"
+            aria-label="Explore ${escapeHtml(service.title)} service"
+          >
+            <span class="service-card__bg" aria-hidden="true"></span>
 
-          <h3 class="service-card__title">${escapeHtml(service.title)}</h3>
-          <p class="service-card__text">${escapeHtml(service.cardText || "")}</p>
-        </div>
+            <span class="service-card__top">
+              <span class="card-icon">${createIcon(service.icon || "sparkles")}</span>
+              <span class="service-card__number">${String(index + 1).padStart(2, "0")}</span>
+            </span>
 
-        <a class="text-link service-card__link" href="${escapeHtml(service.href)}">
-          <span>Explore service</span>
-          ${createIcon("arrow-up-right")}
-        </a>
-      </article>
-    `).join("");
-    }
+            <span class="service-card__body">
+              <span class="service-card__title">${escapeHtml(service.title)}</span>
+              <span class="service-card__text">${escapeHtml(service.cardText || "")}</span>
+            </span>
+
+            <span class="text-link service-card__link">
+              <span>Explore service</span>
+              ${createIcon("arrow-up-right")}
+            </span>
+          </a>
+        `).join("")}
+      </div>
+
+      <div class="home-services__pagination swiper-pagination" aria-label="Services slider pagination"></div>
+    `;
+  }
 
     /* =========================
        ABOUT
@@ -445,5 +462,54 @@
     counters.forEach((counter) => {
       observer.observe(counter);
     });
+  }
+
+  /* =========================
+   SERVICES SWIPER
+========================= */
+
+  let homeServicesSwiper = null;
+
+  function initHomeServicesSwiper() {
+    const slider = document.querySelector(".home-services__slider");
+    if (!slider) return;
+
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+
+    const enableSwiper = () => {
+      if (!mediaQuery.matches) {
+        if (homeServicesSwiper) {
+          homeServicesSwiper.destroy(true, true);
+          homeServicesSwiper = null;
+        }
+
+        return;
+      }
+
+      if (homeServicesSwiper || typeof Swiper === "undefined") return;
+
+      homeServicesSwiper = new Swiper(slider, {
+        loop: true,
+        speed: 720,
+        spaceBetween: 14,
+        grabCursor: true,
+        slidesPerView: 1,
+        centeredSlides: false,
+        pagination: {
+          el: ".home-services__pagination",
+          clickable: true
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 16
+          }
+        }
+      });
+    };
+
+    enableSwiper();
+
+    mediaQuery.addEventListener("change", enableSwiper);
   }
 })();
