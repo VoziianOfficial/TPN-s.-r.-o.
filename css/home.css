@@ -4606,7 +4606,6 @@
     min-height: 210px;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(1) contrast(1.06);
 }
 
 .benefits-editorial__image::after {
@@ -4780,7 +4779,6 @@
     min-height: 170px;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(1) contrast(1.05);
 }
 
 .benefits-editorial__team::after {
