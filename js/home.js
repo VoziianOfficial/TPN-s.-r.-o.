@@ -13,7 +13,8 @@
         renderHomeBenefits();
         renderHomeStrategy();
         renderHomeFramework();
-        renderHomeContactDetails();
+      renderHomeContactDetails();
+      initHeroStatCounter();
 
         if (typeof helpers.initFaqAccordions === "function") {
             helpers.initFaqAccordions();
@@ -339,18 +340,18 @@
     `).join("");
     }
 
-    /* =========================
-       CONTACT DETAILS
-    ========================= */
+  /* =========================
+ CONTACT DETAILS
+========================= */
 
-    function renderHomeContactDetails() {
-        const mount = document.querySelector("[data-home-contact-details]");
-        if (!mount) return;
+  function renderHomeContactDetails() {
+    const mount = document.querySelector("[data-home-contact-details]");
+    if (!mount) return;
 
-        const emailValue = getEmailValue();
-        const addressText = getAddressText();
+    const emailValue = getEmailValue();
+    const addressText = getAddressText();
 
-        mount.innerHTML = `
+    mount.innerHTML = `
       ${emailValue ? `
         <a class="home-contact__direct-link" href="${escapeHtml(getEmailHref())}">
           ${createIcon("mail")}
@@ -376,5 +377,69 @@
         </a>
       ` : ""}
     `;
-    }
+  }
+
+  /* =========================
+     HERO STAT COUNTER
+  ========================= */
+
+  function initHeroStatCounter() {
+    const counters = document.querySelectorAll(".home-hero__stat-value");
+
+    if (!counters.length) return;
+
+    const animateCounter = (counter) => {
+      if (counter.dataset.counted === "true") return;
+
+      const originalText = counter.textContent.trim();
+      const target = parseInt(originalText.replace(/[^\d]/g, ""), 10);
+      const suffix = originalText.replace(/[\d]/g, "");
+
+      if (!target || Number.isNaN(target)) return;
+
+      counter.dataset.counted = "true";
+
+      const duration = 2300;
+      const startTime = performance.now();
+
+      const easeOutCubic = (progress) => {
+        return 1 - Math.pow(1 - progress, 3);
+      };
+
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutCubic(progress);
+        const currentValue = Math.floor(easedProgress * target);
+
+        counter.textContent = `${currentValue}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = `${target}${suffix}`;
+        }
+      };
+
+      requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.45
+      }
+    );
+
+    counters.forEach((counter) => {
+      observer.observe(counter);
+    });
+  }
 })();

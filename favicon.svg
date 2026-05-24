@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(22 18) rotate(55) scale(62 62)">
+      <stop offset="0" stop-color="#2A2F35"/>
+      <stop offset="1" stop-color="#0B0D0F"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+
+  <rect x="18" y="26" width="10" height="24" rx="2.5" fill="#FFFFFF"/>
+  <rect x="34" y="18" width="10" height="32" rx="2.5" fill="#FFFFFF"/>
+
+  <path d="M14 42L28 32L36 36L50 24" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 24L47 33L56 27Z" fill="#FFFFFF"/>
+</svg>

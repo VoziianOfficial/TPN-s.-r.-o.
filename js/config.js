@@ -20,8 +20,8 @@ window.SITE_CONFIG = {
         logoIcon: "./assets/icons/tpn-logo.png",
         logoIconDark: "./assets/icons/tpn-logo-footer.png",
 
-        faviconSvg: "./assets/icons/favicon.svg",
-        faviconIco: "./assets/icons/favicon.ico",
+        faviconSvg: "./favicon.svg",
+        faviconIco: "./favicon.ico",
 
         images: {
             homeHero: "./assets/images/home-hero.jpg",
