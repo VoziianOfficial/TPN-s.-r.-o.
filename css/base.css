@@ -13,9 +13,9 @@
     --color-text-soft: #66707A;
     --color-text-light: #F5F7FA;
 
-    --color-accent: #34C7BE;
-    --color-accent-hover: #24B0A8;
-    --color-accent-soft: rgba(52, 199, 190, 0.12);
+    --color-accent: #C9822E;
+        --color-accent-hover: #A8651F;
+        --color-accent-soft: rgba(201, 130, 46, 0.16);
 
     --color-line: rgba(23, 25, 28, 0.12);
     --color-line-strong: rgba(23, 25, 28, 0.22);

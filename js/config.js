@@ -728,6 +728,11 @@ window.SITE_CONFIG = {
                     "No. Marketing outcomes cannot be guaranteed because user behavior, competition, platforms, and market conditions change."
             },
             {
+                question: "What should I include in my inquiry?",
+                answer:
+                    "Share your website, what you want to improve (traffic, leads, sales, clarity), any channels you use today, and any timeline or budget notes. This helps TPN respond with clearer next steps."
+            },
+            {
                 question: "How do we start a project?",
                 answer:
                     "You can send a message through the contact form or email TPN directly. The first step is usually understanding your business, goals, and current marketing setup."
