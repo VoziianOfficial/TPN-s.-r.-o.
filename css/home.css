@@ -2204,3 +2204,87 @@
 .home-hero__title br {
     display: block;
 }
+
+/* =========================
+   TRUST STRIP PREMIUM HOVER
+========================= */
+
+.trust-strip__item {
+    position: relative;
+    isolation: isolate;
+    padding: 10px 14px;
+    border-radius: 999px;
+    color: rgba(23, 25, 28, 0.72);
+    background: transparent;
+    cursor: default;
+    transition:
+        transform 280ms cubic-bezier(0.19, 1, 0.22, 1),
+        color 280ms ease,
+        background 280ms ease,
+        box-shadow 280ms ease;
+}
+
+.trust-strip__item::before {
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(194, 162, 127, 0.75);
+    background: linear-gradient(135deg, #D8C3A5, #9E8260);
+    box-shadow:
+        0 0 0 5px rgba(194, 162, 127, 0.12),
+        0 8px 18px rgba(31, 35, 40, 0.12);
+    transition:
+        transform 280ms ease,
+        border-color 280ms ease,
+        background 280ms ease,
+        box-shadow 280ms ease;
+}
+
+.trust-strip__item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 1px solid rgba(194, 162, 127, 0.28);
+    border-radius: inherit;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(246, 244, 239, 0.34)),
+        radial-gradient(circle at 20% 20%, rgba(194, 162, 127, 0.18), transparent 38%);
+    box-shadow:
+        0 18px 44px rgba(22, 25, 29, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transform: scale(0.96);
+    transition:
+        opacity 280ms ease,
+        transform 280ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.trust-strip__item:hover {
+    transform: translateY(-3px);
+    color: #16191D;
+}
+
+.trust-strip__item:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.trust-strip__item:hover::before {
+    transform: scale(1.18);
+    border-color: rgba(31, 35, 40, 0.28);
+    background: linear-gradient(135deg, #E1CCAA, #A88A63);
+    box-shadow:
+        0 0 0 6px rgba(194, 162, 127, 0.16),
+        0 10px 22px rgba(31, 35, 40, 0.18);
+}
+
+/* На планшете/мобилке при наведении можно слегка замедлить ощущение строки */
+@media (max-width: 1024px) {
+    .trust-strip__item {
+        padding: 9px 12px;
+    }
+
+    .trust-strip__inner:hover .trust-strip__track {
+        animation-play-state: paused;
+    }
+}
