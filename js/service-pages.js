@@ -616,11 +616,18 @@
         if (points && Array.isArray(service.matters)) {
             points.innerHTML = service.matters.map((item, index) => `
         <article class="matter-point" data-aos="fade-up" data-aos-delay="${index * 60}">
-          <span class="matter-point__number">${String(index + 1).padStart(2, "0")}</span>
+          <span class="matter-point__icon" aria-hidden="true">
+            ${createIcon(getMatterPointIcon(index))}
+          </span>
           <p class="matter-point__text">${escapeHtml(item)}</p>
         </article>
       `).join("");
         }
+    }
+
+    function getMatterPointIcon(index) {
+        const icons = ["sparkles", "bar-chart-3", "shield-check", "trending-up"];
+        return icons[index % icons.length];
     }
 
     function getMatterIntro(service) {
