@@ -2887,3 +2887,269 @@
         opacity: 0;
     }
 }
+
+/* =========================
+   SERVICE OUTCOME BRIGHT REDESIGN
+   Brighter contrast / warm accents / no boring mini cards
+========================= */
+
+.service-outcome {
+    position: relative;
+    padding: 92px 0 98px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 14% 14%, rgba(255, 255, 255, 0.72), transparent 32%),
+        linear-gradient(180deg, #f4f1e9 0%, #ded6c8 100%);
+}
+
+.service-outcome__box {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.55fr);
+    gap: 46px;
+    align-items: center;
+    padding: 46px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 38px;
+    background:
+        radial-gradient(circle at 12% 16%, rgba(255, 176, 74, 0.34), transparent 34%),
+        radial-gradient(circle at 86% 70%, rgba(255, 92, 57, 0.2), transparent 34%),
+        linear-gradient(135deg, #070809 0%, #17191c 48%, #08090b 100%);
+    color: var(--color-text-light);
+    box-shadow:
+        0 34px 96px rgba(22, 25, 29, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* subtle grid */
+.service-outcome__box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.58;
+}
+
+/* moving shine */
+.service-outcome__box::after {
+    content: "";
+    position: absolute;
+    top: -62%;
+    left: -30%;
+    z-index: -1;
+    width: 24%;
+    height: 230%;
+    pointer-events: none;
+    background: linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.42) 44%,
+            rgba(255, 176, 74, 0.18) 52%,
+            transparent 100%);
+    opacity: 0.62;
+    transform: translateX(-140%) rotate(13deg);
+    animation: outcomeBrightShine 7.4s ease-in-out infinite;
+}
+
+.service-outcome__content {
+    position: relative;
+    z-index: 1;
+}
+
+.service-outcome__content .section-kicker {
+    color: rgba(245, 247, 250, 0.64);
+}
+
+.service-outcome__content .section-title {
+    color: #ffffff;
+    text-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.service-outcome__text {
+    max-width: 760px;
+    color: rgba(245, 247, 250, 0.72);
+    font-size: 17px;
+    line-height: 1.78;
+}
+
+/* right side becomes bright outcome rail, not card stack */
+.service-outcome__visual {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 0;
+    border-top: 1px solid rgba(245, 247, 250, 0.16);
+    border-bottom: 1px solid rgba(245, 247, 250, 0.16);
+}
+
+.outcome-mini-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    min-height: 74px;
+    padding: 17px 0;
+    border: 0;
+    border-bottom: 1px solid rgba(245, 247, 250, 0.12);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: hidden;
+    transition:
+        transform 280ms cubic-bezier(0.19, 1, 0.22, 1),
+        border-color 280ms ease;
+}
+
+.outcome-mini-card:last-child {
+    border-bottom: 0;
+}
+
+.outcome-mini-card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ffb04a, #ff5c39);
+    transition: width 340ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.outcome-mini-card:hover {
+    transform: translateX(8px);
+    border-color: rgba(255, 176, 74, 0.38);
+}
+
+.outcome-mini-card:hover::after {
+    width: 68%;
+}
+
+.outcome-mini-card svg {
+    width: 24px;
+    height: 24px;
+    color: #ffb04a;
+    filter: drop-shadow(0 0 14px rgba(255, 176, 74, 0.22));
+    transition:
+        transform 280ms ease,
+        color 280ms ease,
+        filter 280ms ease;
+}
+
+.outcome-mini-card span {
+    color: rgba(245, 247, 250, 0.9);
+    font-size: 13px;
+    font-weight: 850;
+    line-height: 1.42;
+}
+
+.outcome-mini-card:hover svg {
+    transform: scale(1.12) rotate(-4deg);
+    color: #ffffff;
+    filter:
+        drop-shadow(0 0 18px rgba(255, 176, 74, 0.42)) drop-shadow(0 0 34px rgba(255, 92, 57, 0.16));
+}
+
+@keyframes outcomeBrightShine {
+    0% {
+        transform: translateX(-140%) rotate(13deg);
+    }
+
+    48% {
+        transform: translateX(-140%) rotate(13deg);
+    }
+
+    76% {
+        transform: translateX(560%) rotate(13deg);
+    }
+
+    100% {
+        transform: translateX(560%) rotate(13deg);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .service-outcome {
+        padding: 76px 0 82px;
+    }
+
+    .service-outcome__box {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 38px;
+    }
+
+    .service-outcome__content {
+        text-align: center;
+    }
+
+    .service-outcome__content .section-kicker {
+        justify-content: center;
+        margin-inline: auto;
+    }
+
+    .service-outcome__text {
+        margin-inline: auto;
+    }
+
+    .service-outcome__visual {
+        width: min(100%, 620px);
+        margin-inline: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-outcome {
+        padding: 60px 0 66px;
+    }
+
+    .service-outcome__box {
+        padding: 26px 20px;
+        border-radius: 28px;
+    }
+
+    .service-outcome__text {
+        font-size: 13.5px;
+        line-height: 1.62;
+    }
+
+    .outcome-mini-card {
+        min-height: 62px;
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    .outcome-mini-card svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .outcome-mini-card span {
+        font-size: 12.2px;
+    }
+
+    .outcome-mini-card:hover {
+        transform: translateX(4px);
+    }
+
+    .service-outcome__box::after {
+        display: none;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .service-outcome__box::after {
+        animation: none;
+        opacity: 0;
+    }
+}
