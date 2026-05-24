@@ -1926,3 +1926,120 @@ ol {
         font-size: 15px;
     }
 }
+
+/* =========================
+   FOOTER CTA BACKGROUND PHOTO + SHINE
+========================= */
+
+.footer-cta {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 34px;
+    background:
+        linear-gradient(135deg,
+            rgba(6, 7, 8, 0.88),
+            rgba(18, 21, 25, 0.82)),
+        url("../assets/images/footer-cta-bg.jpg") center / cover no-repeat;
+    box-shadow:
+        0 34px 96px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* затемнение/глубина поверх фото */
+.footer-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.13), transparent 34%),
+        radial-gradient(circle at 82% 72%, rgba(201, 130, 46, 0.18), transparent 34%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.28));
+    pointer-events: none;
+}
+
+/* блеск */
+.footer-cta::after {
+    content: "";
+    position: absolute;
+    top: -55%;
+    left: -32%;
+    z-index: -1;
+    width: 30%;
+    height: 210%;
+    background: linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.38) 42%,
+            rgba(255, 255, 255, 0.14) 50%,
+            transparent 100%);
+    opacity: 0.7;
+    transform: translateX(-120%) rotate(13deg);
+    animation: footerCtaShine 7.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.footer-cta__label {
+    color: rgba(245, 247, 250, 0.62);
+}
+
+.footer-cta__title {
+    color: #ffffff;
+    text-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
+}
+
+.footer-cta__title span {
+    color: var(--color-accent);
+}
+
+.footer-cta__actions {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes footerCtaShine {
+    0% {
+        transform: translateX(-130%) rotate(13deg);
+    }
+
+    48% {
+        transform: translateX(-130%) rotate(13deg);
+    }
+
+    76% {
+        transform: translateX(520%) rotate(13deg);
+    }
+
+    100% {
+        transform: translateX(520%) rotate(13deg);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .footer-cta {
+        border-radius: 30px;
+        background-position: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .footer-cta {
+        border-radius: 26px;
+        background-position: center;
+    }
+
+    .footer-cta::after {
+        width: 42%;
+        opacity: 0.5;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .footer-cta::after {
+        animation: none;
+        opacity: 0;
+    }
+}
