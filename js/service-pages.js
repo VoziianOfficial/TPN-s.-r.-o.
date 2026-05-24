@@ -221,8 +221,6 @@
 
             ${metricItems.map((item, index) => `
                 <article class="overview-rail__item" data-aos="fade-left" data-aos-delay="${index * 60}">
-                    <span class="overview-rail__number">${String(index + 1).padStart(2, "0")}</span>
-
                     <span class="overview-rail__icon">
                         ${createIcon(item.icon)}
                     </span>
@@ -241,12 +239,12 @@
         const map = {
             "google-ads": [
                 {
-                    icon: "target",
+                    icon: "badge-dollar-sign",
                     title: "Intent-focused traffic",
                     text: "Campaigns are shaped around search behavior, offer fit, and meaningful user action."
                 },
                 {
-                    icon: "gauge",
+                    icon: "line-chart",
                     title: "Budget clarity",
                     text: "Spend direction becomes easier to review when campaign structure and goals are clear."
                 },
@@ -259,12 +257,12 @@
 
             "seo-optimization": [
                 {
-                    icon: "scan-search",
+                    icon: "search-check",
                     title: "Technical foundation",
                     text: "Search visibility starts with a site that can be crawled, understood, and organized."
                 },
                 {
-                    icon: "file-text",
+                    icon: "file-check-2",
                     title: "Content relevance",
                     text: "Pages need useful structure, clear intent, and content that supports real search demand."
                 },
@@ -287,7 +285,7 @@
                     text: "Campaign ideas, visuals, and messages are shaped to feel more memorable and consistent."
                 },
                 {
-                    icon: "radio",
+                    icon: "megaphone",
                     title: "Channel rhythm",
                     text: "A clearer posting and campaign structure helps reduce scattered communication."
                 }
@@ -300,12 +298,12 @@
                     text: "A strong website guides users through content, trust points, and next actions."
                 },
                 {
-                    icon: "smartphone",
+                    icon: "monitor-check",
                     title: "Responsive clarity",
                     text: "Layouts are considered across desktop, tablet, mobile, and intermediate screen sizes."
                 },
                 {
-                    icon: "pen-tool",
+                    icon: "sparkles",
                     title: "Brand presentation",
                     text: "Typography, spacing, visuals, and interaction details support a more professional impression."
                 }
@@ -313,12 +311,12 @@
 
             "conversion-boost": [
                 {
-                    icon: "route",
+                    icon: "link",
                     title: "User flow",
                     text: "Conversion work begins by reducing confusion between arrival, understanding, and action."
                 },
                 {
-                    icon: "square-mouse-pointer",
+                    icon: "mouse-pointer-click",
                     title: "CTA clarity",
                     text: "Calls to action become more effective when placement, copy, and context work together."
                 },
@@ -336,12 +334,12 @@
                     text: "Location signals help users and search platforms understand where the business is relevant."
                 },
                 {
-                    icon: "store",
+                    icon: "building-2",
                     title: "Profile quality",
                     text: "Clear business information and profile completeness can support local discovery."
                 },
                 {
-                    icon: "navigation",
+                    icon: "globe-2",
                     title: "Service-area clarity",
                     text: "Local pages and keywords should explain where services are offered without thin content."
                 }
@@ -350,7 +348,7 @@
 
         return map[service.id] || [
             {
-                icon: "compass",
+                icon: "radar",
                 title: "Clear direction",
                 text: "The service is planned around business goals, user needs, and practical next steps."
             },
@@ -897,10 +895,6 @@
         aria-label="Explore ${escapeHtml(item.title)} service"
       >
         <span class="related-orbit__ring" aria-hidden="true"></span>
-
-        <span class="related-orbit__number">
-          ${String(index + 1).padStart(2, "0")}
-        </span>
 
         <span class="related-orbit__icon">
           ${createIcon(item.icon || "sparkles")}

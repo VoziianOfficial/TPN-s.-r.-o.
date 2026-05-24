@@ -1915,7 +1915,7 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 54px 46px minmax(0, 1fr);
+    grid-template-columns: 46px minmax(0, 1fr);
     gap: 16px;
     align-items: start;
     min-height: 96px;
@@ -1951,18 +1951,6 @@
 
 .overview-rail__item:hover::after {
     width: 54%;
-}
-
-.overview-rail__number {
-    color: rgba(23, 25, 28, 0.36);
-    font-family: var(--font-heading);
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.055em;
-    transition:
-        color 280ms ease,
-        transform 280ms ease;
 }
 
 .overview-rail__icon {
@@ -2008,11 +1996,6 @@
     font-size: 13px;
     font-weight: 650;
     line-height: 1.58;
-}
-
-.overview-rail__item:hover .overview-rail__number {
-    color: var(--color-text);
-    transform: translateX(3px);
 }
 
 .overview-rail__item:hover .overview-rail__icon {
@@ -2102,27 +2085,20 @@
     }
 
     .overview-rail__item {
-        grid-template-columns: 40px minmax(0, 1fr);
+        grid-template-columns: 34px minmax(0, 1fr);
         gap: 10px;
         min-height: auto;
         padding: 16px 0;
     }
 
-    .overview-rail__number {
-        grid-column: 1;
-        font-size: 16px;
-    }
-
     .overview-rail__icon {
-        grid-column: 1;
-        grid-row: 2;
         width: 34px;
         height: 34px;
     }
 
     .overview-rail__content {
-        grid-column: 2;
-        grid-row: 1 / span 2;
+        grid-column: auto;
+        grid-row: auto;
     }
 
     .overview-rail__content h3 {
@@ -3299,20 +3275,6 @@
     transform: rotate(-12deg);
 }
 
-.related-orbit__number {
-    position: absolute;
-    top: 13%;
-    left: 17%;
-    color: rgba(23, 25, 28, 0.36);
-    font-family: var(--font-heading);
-    font-size: clamp(1rem, 1.5vw, 1.35rem);
-    font-weight: 700;
-    letter-spacing: -0.045em;
-    transition:
-        color 280ms ease,
-        transform 280ms ease;
-}
-
 .related-orbit__icon {
     position: absolute;
     top: 13%;
@@ -3377,11 +3339,6 @@
 .related-orbit__arrow svg {
     width: 18px;
     height: 18px;
-}
-
-.related-orbit:hover .related-orbit__number {
-    color: var(--color-text);
-    transform: translateX(4px);
 }
 
 .related-orbit:hover .related-orbit__icon {
@@ -3464,19 +3421,9 @@
         border-radius: 999px;
     }
 
-    .related-orbit__number {
-        top: 50%;
-        left: 24px;
-        transform: translateY(-50%);
-    }
-
-    .related-orbit:hover .related-orbit__number {
-        transform: translateY(-50%) translateX(3px);
-    }
-
     .related-orbit__icon {
         top: 50%;
-        left: 50px;
+        left: 24px;
         right: auto;
         transform: translateY(-50%);
     }
@@ -3519,12 +3466,8 @@
         padding: 20px 64px 20px 62px;
     }
 
-    .related-orbit__number {
-        left: 18px;
-    }
-
     .related-orbit__icon {
-        left: 40px;
+        left: 18px;
     }
 
     .related-orbit__arrow {
@@ -3732,7 +3675,7 @@
     .overview-rail__item {
         min-height: 86px !important;
         padding: 17px 0 !important;
-        grid-template-columns: 50px 44px minmax(0, 1fr) !important;
+        grid-template-columns: 44px minmax(0, 1fr) !important;
     }
 
     .overview-rail__content h3 {
@@ -4522,13 +4465,6 @@
                 transparent) !important;
     }
 
-    .overview-rail__number {
-        display: block !important;
-        font-size: 21px !important;
-        line-height: 1 !important;
-        color: rgba(23, 25, 28, 0.38) !important;
-    }
-
     .overview-rail__icon {
         width: 34px !important;
         height: 34px !important;
@@ -4596,10 +4532,6 @@
         padding: 15px 11px !important;
     }
 
-    .overview-rail__number {
-        font-size: 18px !important;
-    }
-
     .overview-rail__icon {
         width: 31px !important;
         height: 31px !important;
@@ -4621,33 +4553,17 @@
 
 @media (max-width: 768px) {
     .overview-rail__item {
-        position: relative !important;
         grid-template-columns: 34px minmax(0, 1fr) !important;
-        padding: 16px 48px 16px 0 !important;
-    }
-
-    .overview-rail__number {
-        grid-column: 1 !important;
-        grid-row: 1 !important;
+        padding: 16px 0 !important;
     }
 
     .overview-rail__icon {
-        position: absolute !important;
-        top: 16px !important;
-        right: 0 !important;
-        z-index: 3 !important;
-
-        grid-column: auto !important;
-        grid-row: auto !important;
-
         width: 32px !important;
         height: 32px !important;
         margin: 0 !important;
     }
 
     .overview-rail__content {
-        grid-column: 2 !important;
-        grid-row: 1 / span 2 !important;
         padding-right: 4px !important;
     }
 
@@ -4664,12 +4580,10 @@
 @media (max-width: 420px) {
     .overview-rail__item {
         grid-template-columns: 30px minmax(0, 1fr) !important;
-        padding: 14px 42px 14px 0 !important;
+        padding: 14px 0 !important;
     }
 
     .overview-rail__icon {
-        top: 14px !important;
-        right: 0 !important;
         width: 28px !important;
         height: 28px !important;
     }
