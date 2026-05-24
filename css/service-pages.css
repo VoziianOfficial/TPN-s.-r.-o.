@@ -3541,3 +3541,1072 @@
         display: none;
     }
 }
+
+/* =========================
+   SERVICE PAGES TABLET POLISH
+   iPad / tablet only
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Shared spacing */
+    .service-hero,
+    .service-overview,
+    .service-included,
+    .service-matters,
+    .service-deliverables,
+    .service-outcome {
+        overflow: hidden;
+    }
+
+    .service-overview,
+    .service-included,
+    .service-matters,
+    .service-deliverables,
+    .service-outcome {
+        padding-top: 72px !important;
+        padding-bottom: 78px !important;
+    }
+
+    .service-overview .container,
+    .service-included .container,
+    .service-matters .container,
+    .service-deliverables .container,
+    .service-outcome .container {
+        width: min(var(--container-wide), calc(100% - 44px));
+    }
+
+    /* =========================
+       1. SERVICE HERO TABLET
+    ========================= */
+
+    .service-hero {
+        min-height: auto !important;
+        padding: 82px 0 74px !important;
+    }
+
+    .service-hero__overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(22, 25, 29, 0.94) 0%,
+                rgba(22, 25, 29, 0.84) 46%,
+                rgba(22, 25, 29, 0.9) 100%),
+            radial-gradient(circle at 74% 24%, rgba(201, 130, 46, 0.24), transparent 34%) !important;
+    }
+
+    .service-hero__inner {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+        align-items: center !important;
+        width: min(var(--container-wide), calc(100% - 44px)) !important;
+        min-height: auto !important;
+    }
+
+    .service-hero__content {
+        max-width: 880px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-breadcrumb {
+        justify-content: center !important;
+        margin-bottom: 18px !important;
+    }
+
+    .service-hero__title {
+        max-width: 860px !important;
+        margin-inline: auto !important;
+        margin-bottom: 18px !important;
+        font-size: clamp(3.4rem, 8vw, 5.4rem) !important;
+        line-height: 0.94 !important;
+        letter-spacing: -0.066em !important;
+    }
+
+    .service-hero__text {
+        max-width: 720px !important;
+        margin-inline: auto !important;
+        margin-bottom: 26px !important;
+        font-size: 16px !important;
+        line-height: 1.72 !important;
+    }
+
+    .service-hero__actions {
+        justify-content: center !important;
+    }
+
+    .service-hero__panel {
+        display: grid !important;
+        grid-template-columns: 58px minmax(0, 1fr);
+        column-gap: 18px;
+        row-gap: 8px;
+        width: min(100%, 760px) !important;
+        max-width: 760px !important;
+        margin-inline: auto !important;
+        padding: 22px 24px !important;
+        border-radius: 26px !important;
+        text-align: left !important;
+    }
+
+    .service-hero__panel::before {
+        left: 24px !important;
+        width: 72px !important;
+    }
+
+    .service-hero__panel-icon {
+        grid-row: 1 / span 3;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0 !important;
+        padding-top: 4px;
+    }
+
+    .service-hero__panel-icon svg {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .service-hero__panel-label {
+        margin-bottom: 2px !important;
+    }
+
+    .service-hero__panel-title {
+        margin-bottom: 2px !important;
+        font-size: 25px !important;
+    }
+
+    .service-hero__panel-text {
+        font-size: 13px !important;
+        line-height: 1.58 !important;
+    }
+
+    /* =========================
+       2. OVERVIEW TABLET
+    ========================= */
+
+    .service-overview__grid {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+    }
+
+    .service-overview__content {
+        max-width: 820px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-overview__content .section-kicker {
+        justify-content: center !important;
+        margin-inline: auto !important;
+    }
+
+    .service-overview__content .section-title {
+        max-width: 780px !important;
+        margin-inline: auto !important;
+    }
+
+    .service-overview__text {
+        max-width: 700px !important;
+        margin-inline: auto !important;
+        font-size: 15px !important;
+        line-height: 1.68 !important;
+    }
+
+    .service-overview__best {
+        grid-template-columns: 120px minmax(0, 1fr) !important;
+        width: min(100%, 720px) !important;
+        margin-inline: auto !important;
+        text-align: left !important;
+    }
+
+    .service-overview__metrics,
+    .service-overview__metrics.overview-rail {
+        width: min(100%, 760px) !important;
+        margin-inline: auto !important;
+    }
+
+    .overview-rail__item {
+        min-height: 86px !important;
+        padding: 17px 0 !important;
+        grid-template-columns: 50px 44px minmax(0, 1fr) !important;
+    }
+
+    .overview-rail__content h3 {
+        font-size: 1.45rem !important;
+    }
+
+    .overview-rail__content p {
+        font-size: 12.6px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* =========================
+       3. INCLUDED TABLET
+    ========================= */
+
+    .service-included .section-header {
+        max-width: 820px !important;
+        margin-inline: auto !important;
+    }
+
+    .service-included .section-title {
+        max-width: 800px !important;
+        margin-inline: auto !important;
+    }
+
+    .service-included .section-text {
+        max-width: 680px !important;
+        margin-inline: auto !important;
+    }
+
+    .included-system {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .included-system__panel {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 28px;
+        row-gap: 12px;
+        width: min(100%, 780px) !important;
+        margin-inline: auto !important;
+        padding: 24px 0 !important;
+        text-align: left !important;
+    }
+
+    .included-system__eyebrow {
+        grid-column: 1 / -1;
+        margin-bottom: 2px !important;
+    }
+
+    .included-system__title {
+        max-width: 620px !important;
+        margin: 0 !important;
+        font-size: clamp(2.1rem, 5.6vw, 3.45rem) !important;
+    }
+
+    .included-system__text {
+        grid-column: 1;
+        max-width: 620px !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .included-system__mini {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        align-self: center;
+        flex-direction: column;
+        gap: 10px !important;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .included-system__list {
+        width: min(100%, 780px) !important;
+        margin-inline: auto !important;
+    }
+
+    .included-row {
+        padding: 19px 0 !important;
+    }
+
+    .included-row__title {
+        font-size: 1.45rem !important;
+    }
+
+    .included-row__text {
+        font-size: 12.8px !important;
+        line-height: 1.58 !important;
+    }
+
+    /* =========================
+       4. WHY IT MATTERS TABLET
+    ========================= */
+
+    .service-matters__grid {
+        grid-template-columns: 1fr !important;
+        gap: 38px !important;
+    }
+
+    .service-matters__visual {
+        width: min(100%, 760px) !important;
+        min-height: auto !important;
+        margin-inline: auto !important;
+    }
+
+    .service-matters__photo {
+        border-radius: 32px !important;
+    }
+
+    .service-matters__photo img {
+        aspect-ratio: 1.85 / 1 !important;
+        object-fit: cover !important;
+    }
+
+    .service-matters__note {
+        right: 22px !important;
+        bottom: 22px !important;
+        width: min(330px, calc(100% - 44px)) !important;
+        padding: 16px !important;
+        border-radius: 20px !important;
+    }
+
+    .service-matters__note strong {
+        font-size: 20px !important;
+    }
+
+    .service-matters__content {
+        max-width: 820px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-matters__content .section-kicker {
+        justify-content: center !important;
+        margin-inline: auto !important;
+    }
+
+    .service-matters__content .section-title,
+    .service-matters__content .section-text {
+        margin-inline: auto !important;
+    }
+
+    .service-matters__points {
+        width: min(100%, 760px) !important;
+        margin: 28px auto 0 !important;
+    }
+
+    .matter-point {
+        grid-template-columns: 46px minmax(0, 1fr) !important;
+        padding: 16px 0 !important;
+        text-align: left !important;
+    }
+
+    .matter-point__text {
+        font-size: 14px !important;
+        line-height: 1.62 !important;
+    }
+
+    /* =========================
+       6. DELIVERABLES TABLET
+    ========================= */
+
+    .service-deliverables__grid {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+    }
+
+    .deliverables-panel {
+        position: static !important;
+        width: min(100%, 820px) !important;
+        margin-inline: auto !important;
+        padding: 24px 0 !important;
+        text-align: center !important;
+    }
+
+    .deliverables-panel .section-kicker {
+        justify-content: center !important;
+        margin-inline: auto !important;
+    }
+
+    .deliverables-panel .section-title {
+        max-width: 780px !important;
+        margin-inline: auto !important;
+        font-size: clamp(2.35rem, 6.3vw, 4rem) !important;
+    }
+
+    .deliverables-panel .section-text {
+        max-width: 680px !important;
+        margin-inline: auto !important;
+    }
+
+    .deliverables-list,
+    .deliverables-list.deliverables-ledger {
+        width: min(100%, 780px) !important;
+        margin-inline: auto !important;
+    }
+
+    .deliverable-row {
+        min-height: 68px !important;
+        padding: 15px 0 !important;
+        grid-template-columns: 48px 58px minmax(0, 1fr) 30px !important;
+    }
+
+    .deliverable-row__title {
+        font-size: 1.35rem !important;
+    }
+
+    /* =========================
+       7. OUTCOME TABLET
+    ========================= */
+
+    .service-outcome__box {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        width: min(100%, 820px) !important;
+        margin-inline: auto !important;
+        padding: 36px !important;
+        border-radius: 32px !important;
+    }
+
+    .service-outcome__content {
+        text-align: center !important;
+    }
+
+    .service-outcome__content .section-kicker {
+        justify-content: center !important;
+        margin-inline: auto !important;
+    }
+
+    .service-outcome__content .section-title {
+        max-width: 740px !important;
+        margin-inline: auto !important;
+    }
+
+    .service-outcome__text {
+        max-width: 680px !important;
+        margin-inline: auto !important;
+        font-size: 15px !important;
+        line-height: 1.68 !important;
+    }
+
+    .service-outcome__visual {
+        width: min(100%, 640px) !important;
+        margin-inline: auto !important;
+    }
+
+    .outcome-mini-card {
+        min-height: 64px !important;
+        padding: 14px 0 !important;
+    }
+
+    .outcome-mini-card span {
+        font-size: 12.6px !important;
+    }
+}
+
+/* =========================
+   HIDE INCLUDED PANEL ON TABLET / MOBILE
+========================= */
+
+@media (max-width: 1024px) {
+    .included-system__panel {
+        display: none !important;
+    }
+
+    .included-system {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .included-system__list {
+        width: min(100%, 780px) !important;
+        margin-inline: auto !important;
+    }
+
+    .service-included__grid.service-included__map {
+        margin-top: 30px !important;
+    }
+}
+
+/* =========================
+   HIDE SERVICE HERO PANEL ON TABLETS
+========================= */
+
+/* Обычные планшеты + iPad portrait/landscape */
+@media (min-width: 768px) and (max-width: 1366px) and (pointer: coarse) {
+    .service-hero__panel {
+        display: none !important;
+    }
+
+    .service-hero__inner {
+        grid-template-columns: 1fr !important;
+        align-items: center !important;
+    }
+
+    .service-hero__content {
+        max-width: 900px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-breadcrumb,
+    .service-hero__actions {
+        justify-content: center !important;
+    }
+
+    .service-hero__text {
+        margin-inline: auto !important;
+    }
+}
+
+/* Фолбэк для планшетов до 1024px, если pointer: coarse не сработает */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .service-hero__panel {
+        display: none !important;
+    }
+
+    .service-hero__inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-hero__content {
+        max-width: 900px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-breadcrumb,
+    .service-hero__actions {
+        justify-content: center !important;
+    }
+
+    .service-hero__text {
+        margin-inline: auto !important;
+    }
+}
+
+/* =========================
+   SERVICE MATTERS POINTS HOVER
+   Warm premium hover / no green / no mint
+========================= */
+
+.service-matters__points .matter-point {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    transition:
+        transform 280ms cubic-bezier(0.19, 1, 0.22, 1),
+        padding 280ms ease,
+        border-color 280ms ease,
+        background 280ms ease;
+}
+
+.service-matters__points .matter-point::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg,
+            rgba(201, 130, 46, 0.12),
+            rgba(255, 255, 255, 0.18),
+            transparent 72%);
+    opacity: 0;
+    transform: translateX(-18px);
+    transition:
+        opacity 280ms ease,
+        transform 280ms ease;
+}
+
+.service-matters__points .matter-point::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(23, 25, 28, 0.82),
+            rgba(201, 130, 46, 0.9));
+    transition: width 340ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.service-matters__points .matter-point:hover {
+    transform: translateX(8px);
+    padding-left: 14px;
+    padding-right: 14px;
+    border-color: rgba(23, 25, 28, 0.24);
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.service-matters__points .matter-point:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.service-matters__points .matter-point:hover::after {
+    width: 62%;
+}
+
+.service-matters__points .matter-point__number {
+    transition:
+        transform 280ms ease,
+        background 280ms ease,
+        color 280ms ease,
+        border-color 280ms ease,
+        box-shadow 280ms ease;
+}
+
+.service-matters__points .matter-point:hover .matter-point__number {
+    transform: scale(1.08);
+    border-color: rgba(201, 130, 46, 0.62);
+    background: #17191c;
+    color: #ffffff;
+    box-shadow:
+        0 0 0 8px rgba(201, 130, 46, 0.13),
+        0 16px 34px rgba(22, 25, 29, 0.12);
+}
+
+.service-matters__points .matter-point__text {
+    position: relative;
+    z-index: 1;
+    transition:
+        color 280ms ease,
+        transform 280ms ease;
+}
+
+.service-matters__points .matter-point:hover .matter-point__text {
+    color: rgba(23, 25, 28, 0.82);
+    transform: translateX(2px);
+}
+
+/* Tablet / Mobile: hover мягче, чтобы не ломал ширину */
+@media (max-width: 1024px) {
+    .service-matters__points .matter-point:hover {
+        transform: translateX(4px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-matters__points .matter-point:hover {
+        transform: translateX(3px);
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .service-matters__points .matter-point:hover::after {
+        width: 46%;
+    }
+}
+
+/* =========================
+   SERVICE IMPACT TABLET REDESIGN
+   Compact full-width editorial strip
+========================= */
+
+/* iPad / tablet portrait + small landscape */
+@media (min-width: 769px) and (max-width: 1180px) {
+    .service-impact {
+        min-height: auto !important;
+        padding: 48px 0 50px !important;
+    }
+
+    .service-impact__bg img {
+        object-position: center !important;
+        filter: grayscale(0.22) saturate(0.78) contrast(1.08) brightness(0.62) !important;
+        transform: scale(1.04) !important;
+    }
+
+    .service-impact__overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(6, 7, 8, 0.9) 0%,
+                rgba(6, 7, 8, 0.74) 48%,
+                rgba(6, 7, 8, 0.9) 100%),
+            radial-gradient(circle at 74% 18%, rgba(255, 176, 74, 0.2), transparent 30%),
+            radial-gradient(circle at 18% 82%, rgba(201, 130, 46, 0.16), transparent 32%) !important;
+    }
+
+    .service-impact__inner {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 26px !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .service-impact__content {
+        width: min(100%, 860px) !important;
+        margin-inline: auto !important;
+    }
+
+    .service-impact__content .section-kicker,
+    .service-impact__kicker {
+        justify-content: center !important;
+        margin-inline: auto !important;
+        margin-bottom: 12px !important;
+    }
+
+    .service-impact__title {
+        max-width: 900px !important;
+        margin-inline: auto !important;
+        font-size: clamp(2.35rem, 6vw, 4.35rem) !important;
+        line-height: 0.96 !important;
+        letter-spacing: -0.064em !important;
+        text-align: center !important;
+    }
+
+    .service-impact__signals {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 0 !important;
+        width: min(100%, 820px) !important;
+        margin: 0 auto !important;
+        overflow: hidden !important;
+        border-top: 1px solid rgba(245, 247, 250, 0.16) !important;
+        border-bottom: 1px solid rgba(245, 247, 250, 0.16) !important;
+        background: rgba(255, 255, 255, 0.035) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    .service-impact__signal {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        align-content: start !important;
+        gap: 7px !important;
+        min-height: 104px !important;
+        padding: 15px 14px !important;
+        border-right: 1px solid rgba(245, 247, 250, 0.12) !important;
+        border-bottom: 0 !important;
+        text-align: left !important;
+        background: transparent !important;
+    }
+
+    .service-impact__signal:last-child {
+        border-right: 0 !important;
+    }
+
+    .service-impact__signal::after {
+        left: 14px !important;
+        right: 14px !important;
+        background: linear-gradient(90deg, #ffb04a, #c9822e, transparent) !important;
+    }
+
+    .service-impact__number {
+        display: block !important;
+        margin: 0 0 2px !important;
+        color: rgba(245, 247, 250, 0.42) !important;
+        font-size: 20px !important;
+        line-height: 1 !important;
+    }
+
+    .service-impact__signal strong {
+        display: block !important;
+        color: #ffffff !important;
+        font-size: 16px !important;
+        line-height: 1 !important;
+        letter-spacing: -0.04em !important;
+    }
+
+    .service-impact__signal em {
+        display: block !important;
+        max-width: 150px !important;
+        color: rgba(245, 247, 250, 0.58) !important;
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+        letter-spacing: 0.045em !important;
+    }
+
+    .service-impact__signal:hover {
+        transform: translateY(-3px) !important;
+        background: rgba(255, 255, 255, 0.055) !important;
+    }
+
+    .service-impact::after {
+        width: 18% !important;
+        opacity: 0.36 !important;
+    }
+}
+
+/* Small tablets / narrow iPad */
+@media (min-width: 769px) and (max-width: 860px) {
+    .service-impact {
+        padding: 42px 0 44px !important;
+    }
+
+    .service-impact__title {
+        font-size: clamp(2.15rem, 6.4vw, 3.55rem) !important;
+    }
+
+    .service-impact__signals {
+        width: min(100%, 720px) !important;
+    }
+
+    .service-impact__signal {
+        min-height: 96px !important;
+        padding: 13px 10px !important;
+    }
+
+    .service-impact__number {
+        font-size: 18px !important;
+    }
+
+    .service-impact__signal strong {
+        font-size: 14.5px !important;
+    }
+
+    .service-impact__signal em {
+        font-size: 9.4px !important;
+        line-height: 1.22 !important;
+    }
+}
+
+/* iPad Pro landscape / tablet devices with wider screens */
+@media (min-width: 1025px) and (max-width: 1366px) and (pointer: coarse) {
+    .service-impact {
+        min-height: auto !important;
+        padding: 52px 0 54px !important;
+    }
+
+    .service-impact__inner {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+        text-align: center !important;
+    }
+
+    .service-impact__content {
+        width: min(100%, 960px) !important;
+        margin-inline: auto !important;
+    }
+
+    .service-impact__title {
+        max-width: 960px !important;
+        margin-inline: auto !important;
+        font-size: clamp(3rem, 5.6vw, 5rem) !important;
+        line-height: 0.94 !important;
+    }
+
+    .service-impact__signals {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        width: min(100%, 900px) !important;
+        margin-inline: auto !important;
+    }
+
+    .service-impact__signal {
+        min-height: 106px !important;
+        padding: 16px 16px !important;
+    }
+}
+
+/* =========================
+   SERVICE OVERVIEW TABLET REDESIGN
+   Compact / centered / warm accent
+========================= */
+
+@media (min-width: 769px) and (max-width: 1180px) {
+    .service-overview {
+        padding: 64px 0 70px !important;
+    }
+
+    .service-overview__grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        align-items: center !important;
+    }
+
+    .service-overview__content {
+        width: min(100%, 860px) !important;
+        max-width: 860px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-overview__content .section-kicker {
+        justify-content: center !important;
+        margin-inline: auto !important;
+        margin-bottom: 12px !important;
+    }
+
+    .service-overview__content .section-title {
+        max-width: 800px !important;
+        margin-inline: auto !important;
+        margin-bottom: 16px !important;
+        font-size: clamp(2.45rem, 6vw, 4.35rem) !important;
+        line-height: 0.96 !important;
+        letter-spacing: -0.064em !important;
+    }
+
+    .service-overview__text {
+        max-width: 720px !important;
+        margin: 0 auto 22px !important;
+        font-size: 14.5px !important;
+        line-height: 1.66 !important;
+    }
+
+    /* Best for — аккуратная горизонтальная строка */
+    .service-overview__best {
+        display: grid !important;
+        grid-template-columns: 110px minmax(0, 1fr) !important;
+        gap: 20px !important;
+        align-items: start !important;
+        width: min(100%, 740px) !important;
+        margin: 0 auto !important;
+        padding: 16px 0 0 !important;
+        border: 0 !important;
+        border-top: 1px solid rgba(23, 25, 28, 0.18) !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-align: left !important;
+    }
+
+    .service-overview__best::before {
+        display: none !important;
+    }
+
+    .service-overview__best-label,
+    .service-overview__best-title {
+        color: rgba(23, 25, 28, 0.48) !important;
+        font-size: 10.5px !important;
+        font-weight: 900 !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+    }
+
+    .service-overview__best-text {
+        color: rgba(23, 25, 28, 0.72) !important;
+        font-size: 13px !important;
+        font-weight: 750 !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Metrics — компактный rail */
+    .service-overview__metrics,
+    .service-overview__metrics.overview-rail {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 0 !important;
+        width: min(100%, 860px) !important;
+        margin-inline: auto !important;
+        overflow: hidden !important;
+        border-top: 1px solid rgba(23, 25, 28, 0.16) !important;
+        border-bottom: 1px solid rgba(23, 25, 28, 0.16) !important;
+        background: rgba(255, 255, 255, 0.24) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    .overview-rail__shine {
+        width: 26% !important;
+        opacity: 0.5 !important;
+    }
+
+    .overview-rail__item {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        align-content: start !important;
+        min-height: 142px !important;
+        padding: 18px 16px !important;
+        border-right: 1px solid rgba(23, 25, 28, 0.12) !important;
+        border-bottom: 0 !important;
+        text-align: left !important;
+    }
+
+    .overview-rail__item:last-child {
+        border-right: 0 !important;
+    }
+
+    .overview-rail__item::after {
+        left: 16px !important;
+        right: 16px !important;
+        background: linear-gradient(90deg,
+                #c9822e,
+                rgba(23, 25, 28, 0.75),
+                transparent) !important;
+    }
+
+    .overview-rail__number {
+        display: block !important;
+        font-size: 21px !important;
+        line-height: 1 !important;
+        color: rgba(23, 25, 28, 0.38) !important;
+    }
+
+    .overview-rail__icon {
+        width: 34px !important;
+        height: 34px !important;
+        margin-top: 2px !important;
+        color: #c9822e !important;
+        border-color: rgba(23, 25, 28, 0.14) !important;
+        background: rgba(255, 255, 255, 0.42) !important;
+    }
+
+    .overview-rail__icon svg {
+        width: 17px !important;
+        height: 17px !important;
+    }
+
+    .overview-rail__content h3 {
+        margin-top: 2px !important;
+        margin-bottom: 7px !important;
+        font-size: 1.25rem !important;
+        line-height: 1 !important;
+    }
+
+    .overview-rail__content p {
+        max-width: 100% !important;
+        font-size: 11.8px !important;
+        line-height: 1.48 !important;
+    }
+
+    .overview-rail__item:hover {
+        transform: translateY(-4px) !important;
+        background: rgba(255, 255, 255, 0.34) !important;
+    }
+
+    .overview-rail__item:hover .overview-rail__icon {
+        background: #17191c !important;
+        color: #ffffff !important;
+        box-shadow:
+            0 0 0 7px rgba(201, 130, 46, 0.12),
+            0 16px 34px rgba(22, 25, 29, 0.12) !important;
+    }
+}
+
+/* Узкие планшеты */
+@media (min-width: 769px) and (max-width: 860px) {
+    .service-overview {
+        padding: 58px 0 64px !important;
+    }
+
+    .service-overview__content .section-title {
+        font-size: clamp(2.2rem, 6.6vw, 3.5rem) !important;
+    }
+
+    .service-overview__best {
+        grid-template-columns: 1fr !important;
+        gap: 7px !important;
+        text-align: center !important;
+    }
+
+    .service-overview__metrics,
+    .service-overview__metrics.overview-rail {
+        width: min(100%, 720px) !important;
+    }
+
+    .overview-rail__item {
+        min-height: 128px !important;
+        padding: 15px 11px !important;
+    }
+
+    .overview-rail__number {
+        font-size: 18px !important;
+    }
+
+    .overview-rail__icon {
+        width: 31px !important;
+        height: 31px !important;
+    }
+
+    .overview-rail__content h3 {
+        font-size: 1.08rem !important;
+    }
+
+    .overview-rail__content p {
+        font-size: 11px !important;
+        line-height: 1.42 !important;
+    }
+}
