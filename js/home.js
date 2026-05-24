@@ -102,10 +102,10 @@
             bgImage.setAttribute("alt", "Creative marketing strategy workspace");
         }
 
-        if (visualImage && getImage("strategy")) {
-            visualImage.setAttribute("src", getImage("strategy"));
-            visualImage.setAttribute("alt", "Marketing team planning digital growth strategy");
-        }
+      if (visualImage && getImage("heroVisual")) {
+        visualImage.setAttribute("src", getImage("heroVisual"));
+        visualImage.setAttribute("alt", "Marketing team planning digital growth strategy");
+      }
 
         if (eyebrow) {
             eyebrow.textContent = hero.eyebrow || "Growth marketing agency";

@@ -25,6 +25,7 @@ window.SITE_CONFIG = {
 
         images: {
             homeHero: "./assets/images/home-hero.jpg",
+            heroVisual: "./assets/images/hero-visual-marketing.jpg",
             about: "./assets/images/about-agency.jpg",
             process: "./assets/images/process-planning.jpg",
             strategy: "./assets/images/strategy-workspace.jpg",
