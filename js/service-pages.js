@@ -11,6 +11,7 @@
 
         renderServiceHero(service);
         renderServiceOverview(service);
+        renderServiceImpact(service);
         renderIncluded(service);
         renderWhyItMatters(service);
         renderMethod(service);
@@ -420,6 +421,112 @@
         </div>
       </div>
     `;
+    }
+    function renderServiceImpact(service) {
+        const bg = document.querySelector("[data-service-impact-bg]");
+        const kicker = document.querySelector("[data-service-impact-kicker]");
+        const title = document.querySelector("[data-service-impact-title]");
+        const signals = document.querySelector("[data-service-impact-signals]");
+
+        const data = getServiceImpactData(service);
+        const image = service.impactImage || service.image || "";
+
+        if (bg && image) {
+            bg.setAttribute("src", image);
+            bg.setAttribute("alt", `${service.title} marketing direction`);
+        }
+
+        if (kicker) {
+            kicker.textContent = data.kicker;
+        }
+
+        if (title) {
+            title.innerHTML = data.title;
+        }
+
+        if (signals) {
+            signals.innerHTML = data.signals.map((item, index) => `
+            <span class="service-impact__signal" data-aos="fade-up" data-aos-delay="${index * 55}">
+                <span class="service-impact__number">${String(index + 1).padStart(2, "0")}</span>
+                <strong>${escapeHtml(item.title)}</strong>
+                <em>${escapeHtml(item.text)}</em>
+            </span>
+        `).join("");
+        }
+    }
+
+    function getServiceImpactData(service) {
+        const map = {
+            "google-ads": {
+                kicker: "Paid traffic direction",
+                title: `Intent, landing flow, tracking, and budget clarity should move as <span>one paid growth system.</span>`,
+                signals: [
+                    { title: "Intent", text: "Search demand" },
+                    { title: "Flow", text: "Landing clarity" },
+                    { title: "Tracking", text: "Smarter signals" }
+                ]
+            },
+
+            "seo-optimization": {
+                kicker: "Organic growth direction",
+                title: `Technical structure, content relevance, and search visibility should build <span>one stronger organic path.</span>`,
+                signals: [
+                    { title: "Structure", text: "Technical clarity" },
+                    { title: "Content", text: "Search relevance" },
+                    { title: "Visibility", text: "Long-term signals" }
+                ]
+            },
+
+            "social-media-marketing": {
+                kicker: "Social communication direction",
+                title: `Audience voice, creative rhythm, and campaign ideas should create <span>one recognizable brand presence.</span>`,
+                signals: [
+                    { title: "Voice", text: "Brand tone" },
+                    { title: "Creative", text: "Sharper ideas" },
+                    { title: "Rhythm", text: "Consistent presence" }
+                ]
+            },
+
+            "web-design": {
+                kicker: "Digital experience direction",
+                title: `Structure, visual hierarchy, responsive flow, and trust signals should shape <span>one polished web experience.</span>`,
+                signals: [
+                    { title: "Layout", text: "Clear hierarchy" },
+                    { title: "Responsive", text: "Every device" },
+                    { title: "Action", text: "Better flow" }
+                ]
+            },
+
+            "conversion-boost": {
+                kicker: "Conversion direction",
+                title: `CTA logic, form clarity, trust points, and page flow should reduce friction <span>from attention to action.</span>`,
+                signals: [
+                    { title: "CTA", text: "Clear next step" },
+                    { title: "Trust", text: "Less hesitation" },
+                    { title: "Forms", text: "Lower friction" }
+                ]
+            },
+
+            "local-seo": {
+                kicker: "Local visibility direction",
+                title: `Location signals, local content, profile quality, and discovery should support <span>one clearer local presence.</span>`,
+                signals: [
+                    { title: "Location", text: "Service area" },
+                    { title: "Profile", text: "Local trust" },
+                    { title: "Discovery", text: "Search presence" }
+                ]
+            }
+        };
+
+        return map[service.id] || {
+            kicker: "Growth direction",
+            title: `${service.title} should create <span>one clearer path from attention to action.</span>`,
+            signals: [
+                { title: "Clarity", text: "Better structure" },
+                { title: "Trust", text: "Stronger proof" },
+                { title: "Action", text: "Clear next step" }
+            ]
+        };
     }
 
     function getIncludedDescription(service, item, index) {
