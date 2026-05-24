@@ -192,7 +192,7 @@
         mount.innerHTML = `
       <header class="site-header" data-header>
         <div class="header-inner">
-          ${renderLogo("./index.html")}
+        ${renderLogo("./index.html")}
 
           <nav class="header-nav" aria-label="Primary navigation">
             ${navHtml}
@@ -222,26 +222,28 @@
     `;
     }
 
-    function renderLogo(href = "./index.html") {
-        const logoSrc = config.assets?.logoIcon || "./assets/icons/tpn-logo.svg";
+  function renderLogo(href = "./index.html", variant = "default") {
+    const defaultLogo = config.assets?.logoIcon || "./assets/icons/tpn-logo.png";
+    const darkLogo = config.assets?.logoIconDark || defaultLogo;
+    const logoSrc = variant === "dark" ? darkLogo : defaultLogo;
 
-        return `
-      <a class="site-logo" href="${escapeHtml(href)}" aria-label="${escapeHtml(getCompanyName())} home">
-        <img
-          class="site-logo__mark"
-          src="${escapeHtml(logoSrc)}"
-          alt=""
-          width="48"
-          height="48"
-          aria-hidden="true"
-        >
-        <span class="site-logo__text">
-          <span class="site-logo__name">${escapeHtml(getCompanyName())}</span>
-          <span class="site-logo__tagline">Growth agency</span>
-        </span>
-      </a>
+    return `
+        <a class="site-logo" href="${escapeHtml(href)}" aria-label="${escapeHtml(getCompanyName())} home">
+            <img
+                class="site-logo__mark"
+                src="${escapeHtml(logoSrc)}"
+                alt=""
+                width="78"
+                height="62"
+                aria-hidden="true"
+            >
+            <span class="site-logo__text">
+                <span class="site-logo__name">${escapeHtml(getCompanyName())}</span>
+                <span class="site-logo__tagline">Growth agency</span>
+            </span>
+        </a>
     `;
-    }
+  }
 
     function renderDropdownService(service, currentPage) {
         if (!service) return "";
@@ -295,7 +297,7 @@
         return `
       <aside class="mobile-menu" id="mobileMenu" data-mobile-menu>
         <div class="mobile-menu__top">
-          ${renderLogo("./index.html")}
+         ${renderLogo("./index.html", "dark")}
 
           <button class="mobile-menu__close" type="button" aria-label="Close menu" data-mobile-close>
             ${createIcon("x")}
@@ -579,7 +581,7 @@
 
           <div class="footer-grid">
             <div class="footer-brand">
-              ${renderLogo("./index.html")}
+              ${renderLogo("./index.html", "dark")}
               <p class="footer-brand__text">
                 ${escapeHtml(config.footerText || "")}
               </p>

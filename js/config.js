@@ -17,7 +17,9 @@ window.SITE_CONFIG = {
     },
 
     assets: {
-        logoIcon: "./assets/icons/tpn-logo.svg",
+        logoIcon: "./assets/icons/tpn-logo.png",
+        logoIconDark: "./assets/icons/tpn-logo-footer.png",
+
         faviconSvg: "./assets/icons/favicon.svg",
         faviconIco: "./assets/icons/favicon.ico",
 
