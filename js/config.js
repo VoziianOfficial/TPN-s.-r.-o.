@@ -623,32 +623,26 @@ window.SITE_CONFIG = {
                 }
             ]
         },
-
         process: [
             {
                 number: "01",
-                title: "Discover",
-                text: "We review your business, audience, channels, website, and current marketing direction."
+                title: "Define",
+                text: "We clarify goals, audience signals, service priorities, and the strongest direction for the digital experience."
             },
             {
                 number: "02",
-                title: "Define",
-                text: "We shape priorities, campaign goals, positioning, and the clearest path forward."
+                title: "Design",
+                text: "We shape the visual system, messaging structure, content rhythm, and conversion-focused page flow."
             },
             {
                 number: "03",
                 title: "Build",
-                text: "We create the marketing structure, assets, pages, or campaign system needed for execution."
+                text: "We prepare the campaign, page, or marketing structure with clean details and responsive execution."
             },
             {
                 number: "04",
                 title: "Launch",
-                text: "We prepare the experience for real users with clean tracking, strong messaging, and clear actions."
-            },
-            {
-                number: "05",
-                title: "Optimize",
-                text: "We review performance signals and refine the work over time for stronger direction."
+                text: "We review the final experience, check interaction details, and prepare the work for real users."
             }
         ],
 

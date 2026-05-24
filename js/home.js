@@ -262,30 +262,43 @@
        PROCESS
     ========================= */
 
-    function renderHomeProcess() {
-        const mount = document.querySelector("[data-home-process]");
-        const steps = getHomeData().process;
+  function renderHomeProcess() {
+    const mount = document.querySelector("[data-home-process]");
+    const steps = getHomeData().process;
 
-        if (!mount || !Array.isArray(steps)) return;
+    if (!mount || !Array.isArray(steps)) return;
 
-        const cards = steps.map((step, index) => `
-      <article class="process-card" data-aos="fade-up" data-aos-delay="${index * 70}">
-        <span class="process-card__number">${escapeHtml(step.number)}</span>
+    const visibleSteps = steps.slice(0, 4);
+
+    const cards = visibleSteps.map((step, index) => `
+      <article class="process-card process-card--${index + 1}" data-aos="fade-up" data-aos-delay="${index * 70}">
+        <span class="process-card__number">${String(index + 1).padStart(2, "0")}</span>
         <h3 class="process-card__title">${escapeHtml(step.title)}</h3>
         <p class="process-card__text">${escapeHtml(step.text)}</p>
       </article>
     `).join("");
 
-        mount.innerHTML = `
-      ${cards}
-      <span class="process-dot" aria-hidden="true"></span>
-      <span class="process-dot" aria-hidden="true"></span>
-      <span class="process-dot" aria-hidden="true"></span>
-      <span class="process-dot" aria-hidden="true"></span>
-      <div class="process-note" aria-hidden="true">strategy → build → optimize</div>
-    `;
-    }
+    mount.innerHTML = `
+      <svg class="process-path" viewBox="0 0 980 760" fill="none" aria-hidden="true">
+        <path
+          d="M595 82 C480 106 414 158 351 226 C294 288 255 348 328 406 C394 458 517 439 581 502 C647 568 548 647 424 704"
+          stroke="rgba(31, 35, 40, 0.26)"
+          stroke-width="2"
+          stroke-dasharray="7 9"
+          stroke-linecap="round"
+        />
+      </svg>
 
+      <span class="process-dot process-dot--1" aria-hidden="true"></span>
+      <span class="process-dot process-dot--2" aria-hidden="true"></span>
+      <span class="process-dot process-dot--3" aria-hidden="true"></span>
+      <span class="process-dot process-dot--4" aria-hidden="true"></span>
+
+      ${cards}
+
+      <div class="process-note" aria-hidden="true">Ready to be delivered!</div>
+    `;
+  }
     /* =========================
        BENEFITS
     ========================= */
