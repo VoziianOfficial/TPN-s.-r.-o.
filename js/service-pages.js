@@ -683,21 +683,39 @@
         const text = document.querySelector("[data-service-deliverables-text]");
 
         if (title) {
-            title.textContent = `Concrete ${service.title} deliverables`;
+            title.textContent = `${service.title} outputs you can actually use`;
         }
 
         if (text) {
             text.textContent =
-                "The work is organized into practical outputs that help your team understand what was reviewed, what was improved, and where future attention should go.";
+                "The work is organized into clear practical outputs — so every recommendation, page decision, campaign note, or visibility improvement has a defined role.";
         }
 
         if (!mount || !Array.isArray(service.deliverables)) return;
 
-        mount.innerHTML = service.deliverables.map((item, index) => `
-      <span class="deliverable-tag" data-aos="fade-up" data-aos-delay="${index * 35}">
-        ${escapeHtml(item)}
-      </span>
-    `).join("");
+        mount.classList.add("deliverables-ledger");
+
+        mount.innerHTML = `
+        <div class="deliverables-ledger__shine" aria-hidden="true"></div>
+
+        ${service.deliverables.map((item, index) => `
+            <article class="deliverable-row" data-aos="fade-up" data-aos-delay="${index * 40}">
+                <span class="deliverable-row__number">
+                    ${String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span class="deliverable-row__line" aria-hidden="true"></span>
+
+                <h3 class="deliverable-row__title">
+                    ${escapeHtml(item)}
+                </h3>
+
+                <span class="deliverable-row__arrow" aria-hidden="true">
+                    ${createIcon("arrow-up-right")}
+                </span>
+            </article>
+        `).join("")}
+    `;
     }
 
     /* =========================
