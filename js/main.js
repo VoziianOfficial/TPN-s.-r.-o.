@@ -19,7 +19,8 @@
         renderFooter();
         injectGlobalCompanyData();
         renderCookieBanner();
-        renderMountedFaqs();
+      renderMountedFaqs();
+      splitContactFaqIntoColumns();
         renderMountedForms();
         initStickyHeader();
         initDesktopDropdown();
@@ -1153,6 +1154,40 @@
             });
         }
     }
+
+  function splitContactFaqIntoColumns() {
+    const faqLists = document.querySelectorAll(".contact-clean__faq-list[data-faq-list]");
+
+    faqLists.forEach((list) => {
+      if (list.dataset.columnsReady === "true") return;
+
+      const items = Array.from(list.children).filter((item) =>
+        item.classList.contains("faq-item")
+      );
+
+      if (items.length < 2) return;
+
+      const leftColumn = document.createElement("div");
+      const rightColumn = document.createElement("div");
+
+      leftColumn.className = "contact-clean__faq-column";
+      rightColumn.className = "contact-clean__faq-column";
+
+      const middleIndex = Math.ceil(items.length / 2);
+
+      items.forEach((item, index) => {
+        if (index < middleIndex) {
+          leftColumn.appendChild(item);
+        } else {
+          rightColumn.appendChild(item);
+        }
+      });
+
+      list.innerHTML = "";
+      list.append(leftColumn, rightColumn);
+      list.dataset.columnsReady = "true";
+    });
+  }
 
     function preventHorizontalOverflowWarnings() {
         if (!window.matchMedia("(max-width: 768px)").matches) return;
