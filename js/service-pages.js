@@ -201,23 +201,34 @@
 
         if (best) {
             best.innerHTML = `
-        <strong class="service-overview__best-title">Best for</strong>
-        <span class="service-overview__best-text">${escapeHtml(service.bestFor || "")}</span>
-      `;
+            <span class="service-overview__best-label">Best for</span>
+            <strong class="service-overview__best-text">${escapeHtml(service.bestFor || "")}</strong>
+        `;
         }
 
         if (metrics) {
             const metricItems = getOverviewMetrics(service);
 
-            metrics.innerHTML = metricItems.map((item, index) => `
-        <article class="service-metric" data-aos="fade-left" data-aos-delay="${index * 60}">
-          <span class="service-metric__icon">${createIcon(item.icon)}</span>
-          <span>
-            <h3 class="service-metric__title">${escapeHtml(item.title)}</h3>
-            <p class="service-metric__text">${escapeHtml(item.text)}</p>
-          </span>
-        </article>
-      `).join("");
+            metrics.classList.add("overview-rail");
+
+            metrics.innerHTML = `
+            <div class="overview-rail__shine" aria-hidden="true"></div>
+
+            ${metricItems.map((item, index) => `
+                <article class="overview-rail__item" data-aos="fade-left" data-aos-delay="${index * 60}">
+                    <span class="overview-rail__number">${String(index + 1).padStart(2, "0")}</span>
+
+                    <span class="overview-rail__icon">
+                        ${createIcon(item.icon)}
+                    </span>
+
+                    <span class="overview-rail__content">
+                        <h3>${escapeHtml(item.title)}</h3>
+                        <p>${escapeHtml(item.text)}</p>
+                    </span>
+                </article>
+            `).join("")}
+        `;
         }
     }
 
